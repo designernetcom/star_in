@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company History Timeline</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f8ff;
+            min-height: 100vh;
+            padding: 50px 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: 
+                radial-gradient(circle at 15% 20%, rgba(33, 150, 243, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(66, 165, 245, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(100, 181, 246, 0.05) 0%, transparent 50%);
+            animation: gradientShift 20s ease infinite;
+            z-index: 0;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-5%, -5%) rotate(180deg); }
+        }
+
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .timeline-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #1565c0 0%, #2196f3 50%, #42a5f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            letter-spacing: -2px;
+        }
+
+        .timeline-header p {
+            color: #546e7a;
+            font-size: 1.15rem;
+            font-weight: 400;
+        }
+
+        .timeline-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 35px;
+            margin-bottom: 0;
+            align-items: center;
+            position: relative;
+            animation: fadeInUp 0.6s ease backwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+        .timeline-item:nth-child(6) { animation-delay: 0.6s; }
+
+        .timeline-left,
+        .timeline-right {
+            position: relative;
+        }
+
+        .timeline-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(33, 150, 243, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2196f3, #42a5f5, #64b5f6);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 50px rgba(33, 150, 243, 0.15);
+            border-color: rgba(33, 150, 243, 0.2);
+        }
+
+        .timeline-card:hover::before {
+            transform: translateX(0);
+        }
+
+        .timeline-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .timeline-line {
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, #90caf9, #42a5f5, #2196f3);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .year-badge {
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3);
+            position: relative;
+            z-index: 2;
+            border: 5px solid white;
+            transition: all 0.4s ease;
+        }
+
+        .timeline-item:hover .year-badge {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 12px 35px rgba(33, 150, 243, 0.4);
+        }
+
+        .event-icon {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #42a5f5, #1e88e5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+            border: 3px solid white;
+        }
+
+        .event-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1565c0;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .event-description {
+            color: #546e7a;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .event-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            transition: transform 0.5s ease;
+        }
+
+        .timeline-card:hover .event-image {
+            transform: scale(1.05);
+        }
+
+        .event-stats {
+            display: flex;
+            gap: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #e3f2fd;
+        }
+
+        .stat-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2196f3, #1565c0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.75rem;
+            color: #78909c;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 3px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-right {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .timeline-item:nth-child(even) .timeline-left {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .timeline-header h1 {
+                font-size: 3rem;
+            }
+
+            .timeline-item {
+                grid-template-columns: 80px 1fr;
+                gap: 25px;
+            }
+
+            .timeline-left,
+            .timeline-item:nth-child(odd) .timeline-right,
+            .timeline-item:nth-child(even) .timeline-left {
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+
+            .timeline-right {
+                display: none;
+            }
+
+            .timeline-center {
+                align-items: flex-start;
+            }
+
+            .year-badge {
+                width: 80px;
+                height: 80px;
+                font-size: 1.3rem;
+            }
+
+            .timeline-line {
+                left: 40px;
+            }
+
+            .event-title {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 0;
+            }
+
+            .timeline-header {
+                margin-bottom: 50px;
+            }
+
+            .timeline-header h1 {
+                font-size: 2.3rem;
+            }
+
+            .timeline-header p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+
+            .timeline-wrapper {
+                padding: 0 15px;
+            }
+
+            .timeline-item {
+                grid-template-columns: 70px 1fr;
+                gap: 20px;
+            }
+
+            .year-badge {
+                width: 70px;
+                height: 70px;
+                font-size: 1.1rem;
+                border-width: 4px;
+            }
+
+            .timeline-card {
+                padding: 24px;
+            }
+
+            .event-title {
+                font-size: 1.3rem;
+            }
+
+            .event-description {
+                font-size: 0.9rem;
+            }
+
+            .event-image {
+                height: 180px;
+            }
+
+            .event-stats {
+                flex-wrap: wrap;
+            }
+
+            .stat-item {
+                flex: 0 0 calc(50% - 7.5px);
+            }
+
+            .event-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .timeline-header h1 {
+                font-size: 1.9rem;
+            }
+
+            .timeline-item {
+                grid-template-columns: 60px 1fr;
+                gap: 15px;
+            }
+
+            .year-badge {
+                width: 60px;
+                height: 60px;
+                font-size: 1rem;
+                border-width: 3px;
+            }
+
+            .timeline-card {
+                padding: 20px;
+            }
+
+            .event-title {
+                font-size: 1.2rem;
+            }
+
+            .event-image {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline-header">
+        <h1>Our Journey</h1>
+        <p>Milestones that defined our success story</p>
+    </div>
+
+    <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+
+        <!-- 2015 -->
+        <div class="timeline-item">
+            <div class="timeline-left">
+                <div class="timeline-card">
+                    <div class="event-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="event-title">The Beginning</h3>
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=400&fit=crop" alt="Company founding" class="event-image">
+                    <p class="event-description">Founded with a vision to transform the industry. Three passionate founders started from a small garage with one big dream.</p>
+                    <div class="event-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Founders</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">Office</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$50K</span>
+                            <span class="stat-label">Seed Fund</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-center">
+                <div class="year-badge">2015</div>
+            </div>
+            <div class="timeline-right"></div>
+        </div>
+
+        <!-- 2017 -->
+        <div class="timeline-item">
+            <div class="timeline-left"></div>
+            <div class="timeline-center">
+                <div class="year-badge">2017</div>
+            </div>
+            <div class="timeline-right">
+                <div class="timeline-card">
+                    <div class="event-icon"><i class="fas fa-rocket"></i></div>
+                    <h3 class="event-title">Product Launch</h3>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop" alt="Product launch" class="event-image">
+                    <p class="event-description">Launched our flagship product that gained immediate market traction. Reached 10,000 customers in the first six months.</p>
+                    <div class="event-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Users</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">25</span>
+                            <span class="stat-label">Team</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$2M</span>
+                            <span class="stat-label">Revenue</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2019 -->
+        <div class="timeline-item">
+            <div class="timeline-left">
+                <div class="timeline-card">
+                    <div class="event-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="event-title">Series A Funding</h3>
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=400&fit=crop" alt="Growth" class="event-image">
+                    <p class="event-description">Secured $15M in Series A funding. Expanded operations internationally and grew our team to 150+ professionals.</p>
+                    <div class="event-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">$15M</span>
+                            <span class="stat-label">Funding</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">150K</span>
+                            <span class="stat-label">Users</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-center">
+                <div class="year-badge">2019</div>
+            </div>
+            <div class="timeline-right"></div>
+        </div>
+
+        <!-- 2021 -->
+        <div class="timeline-item">
+            <div class="timeline-left"></div>
+            <div class="timeline-center">
+                <div class="year-badge">2021</div>
+            </div>
+            <div class="timeline-right">
+                <div class="timeline-card">
+                    <div class="event-icon"><i class="fas fa-trophy"></i></div>
+                    <h3 class="event-title">Industry Awards</h3>
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=400&fit=crop" alt="Awards" class="event-image">
+                    <p class="event-description">Won "Best Innovation Award" and reached 1 million active users. Recognized as a leader in our industry.</p>
+                    <div class="event-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1M+</span>
+                            <span class="stat-label">Users</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Awards</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">300+</span>
+                            <span class="stat-label">Employees</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="timeline-item">
+            <div class="timeline-left">
+                <div class="timeline-card">
+                    <div class="event-icon"><i class="fas fa-globe"></i></div>
+                    <h3 class="event-title">Global Expansion</h3>
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop" alt="Global" class="event-image">
+                    <p class="event-description">Achieved market leadership with 5M users across 50 countries. Strategic partnerships with Fortune 500 companies.</p>
+                    <div class="event-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5M+</span>
+                            <span class="stat-label">Users</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$100M</span>
+                            <span class="stat-label">Valuation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-center">
+                <div class="year-badge">2023</div>
+            </div>
+            <div class="timeline-right"></div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="timeline-item">
+            <div class="timeline-left"></div>
+            <div class="timeline-center">
+                <div class="year-badge">2024</div>
+            </div>
+            <div class="timeline-right">
+                <div class="timeline-card">
+                    <div class="event-icon"><i class="fas fa-brain"></i></div>
+                    <h3 class="event-title">AI Innovation</h3>
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop" alt="AI Future" class="event-image">
+                    <p class="event-description">Pioneering AI-powered solutions. Setting new standards and leading digital transformation across industries.</p>
+                    <div class="event-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10M+</span>
+                            <span class="stat-label">Users</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Team</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">#1</span>
+                            <span class="stat-label">Leader</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

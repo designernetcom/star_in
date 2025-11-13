@@ -3333,14 +3333,14 @@ h2.resp-accordion.resp-tab-active {
 }
 
 .contact-us .contacts-icon img {
-    padding: 16px
+    padding: 10px
 }
 
 .contact-us .contact-details {
     padding: 30px 50px 40px;
     border-radius: 5px;
     margin-left: 20px;
-    background-color: #121c22
+    background-color: #003566
 }
 
 .contact-us .contact-info {
@@ -3355,7 +3355,7 @@ h2.resp-accordion.resp-tab-active {
     width: 55px;
     height: 55px;
     line-height: 55px;
-    background-color: rgba(255, 255, 255, 0.5196078431);
+    background-color: #003566;
     text-align: center;
     display: inline-block;
     transition: .5s
@@ -3368,15 +3368,15 @@ h2.resp-accordion.resp-tab-active {
 }
 
 .contact-us .contacts-title h6 {
-    font-size: 14px;
+    font-size: 17px;
     line-height: 23px;
-    opacity: .702;
+    /* opacity: .702; */
     margin-top: 5px
 }
 
 .contact-us .contact-info:hover .contacts-icon {
     transform: rotateY(180deg);
-    background: #FC5220
+    background: #003566
 }
 
 .contact-us .contact-info.upper2 {

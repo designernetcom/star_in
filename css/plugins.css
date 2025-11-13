@@ -49931,7 +49931,7 @@ header {
     }
 
     .header-style1 .navbar>ul>li.has-sub>a:after {
-        border-color: transparent #fff #fff transparent
+        border-color: transparent black black transparent
     }
 
     .header-style1 .navbar>ul>li.current>a:after {

@@ -9,16 +9,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Industry & Factory HTML Template">
-    <meta name="description" content="Metary is a modern, responsive HTML template designed for industrial, factory, and power‑technology businesses. Featuring ready‑made pages like Services, Portfolio, Blog, Team, Pricing, and Contact.">
+    <meta name="description" content=".">
 
     <!-- title  -->
-    <title>Metary – Industry & Factory HTML Template | Power & Automation Technologies</title>
+    <title>Star Industries</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="img/logos/favicon.png">
-    <link rel="apple-touch-icon" href="img/logos/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/logos/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/logos/apple-touch-icon-114x114.png">
+   
 
     <!-- plugins -->
     <link rel="stylesheet" href="css/plugins.css">
@@ -33,7 +30,369 @@
     <link rel="stylesheet" href="css/scrollbar.css">
 
     <!-- theme core css -->
-    <link href="css/styles.css" rel="stylesheet">    
+    <link href="css/styles.css" rel="stylesheet"> 
+    <style>
+       
+      
+
+        .about-section {
+            min-height: 100vh;
+            /* background: linear-gradient(135deg, #ffffff 0%, #e8eef5 100%); */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.08) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-content {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .about-content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .badge-pill {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+ .title-highlight {
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .about-subtitle {
+            font-size: 1.35rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+            color: #475569;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-item:hover {
+            padding-left: 0.5rem;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .feature-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: white;
+            stroke-width: 2.5;
+            fill: none;
+        }
+
+        .feature-text {
+            font-size: 1rem;
+            color: #334155;
+            font-weight: 500;
+        }
+
+        .stats-container {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            right: -1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60%;
+            background: linear-gradient(to bottom, transparent, #e2e8f0, transparent);
+        }
+
+        .stat-item:last-child::after {
+            display: none;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-top: 0.8rem;
+            font-weight: 500;
+        }
+
+        .image-wrapper {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            transition-delay: 0.3s;
+        }
+
+        .image-wrapper.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .image-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(0, 0, 0, 0.05);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            background: white;
+        }
+
+        .image-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(0, 0, 0, 0.05);
+        }
+
+        .about-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .image-card:hover .about-image {
+            transform: scale(1.05);
+        }
+
+        .floating-badge {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            z-index: 2;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .badge-number {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            line-height: 1;
+        }
+
+        .badge-text {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+
+        .decorative-shape {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .shape-1 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            top: -200px;
+            right: -100px;
+            filter: blur(60px);
+        }
+
+        .shape-2 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.08) 0%, rgba(236, 72, 153, 0.08) 100%);
+            bottom: -150px;
+            left: -100px;
+            filter: blur(60px);
+        }
+
+        @media (max-width: 992px) {
+            .about-title {
+                font-size: 3rem;
+            }
+
+            .stats-grid {
+                gap: 1.5rem;
+            }
+
+            .floating-badge {
+                padding: 1rem 1.5rem;
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 2.5rem;
+                letter-spacing: -1px;
+            }
+
+            .about-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stat-item::after {
+                display: none;
+            }
+
+            .stats-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .floating-badge {
+                position: static;
+                margin-top: 1.5rem;
+                display: inline-block;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-title {
+                font-size: 2rem;
+            }
+
+            .badge-pill {
+                font-size: 0.75rem;
+            }
+        }
+    </style>   
 
 </head>
 
@@ -41,7 +400,7 @@
 
     <!-- PAGE LOADING
     ================================================== -->
-    <div id="preloader"></div>
+  
 
     <!-- MAIN WRAPPER
     ================================================== -->
@@ -49,25 +408,11 @@
 
         <!-- HEADER
         ================================================== -->
-        <header class="header-style1 menu_area-light">
+           <header class="header-style1">
 
-            <div class="navbar-default border-bottom border-color-light-white">
+            <div class="navbar-default border-bottom border-color-light-white" style="background-color: white;">
 
-                <!-- start top search -->
-                <div class="top-search bg-primary">
-                    <div class="container-fluid px-lg-1-6 px-xl-2-5 px-xxl-2-9">
-                        <form class="search-form" action="search.html" method="GET" accept-charset="utf-8">
-                            <div class="input-group">
-                                <span class="input-group-addon cursor-pointer">
-                                    <button class="search-form_submit fas fa-search text-white" type="submit"></button>
-                                </span>
-                                <input type="text" class="search-form_input form-control" name="s" autocomplete="off" placeholder="Type & hit enter...">
-                                <span class="input-group-addon close-search mt-1"><i class="fas fa-times"></i></span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- end top search -->
+            
 
                 <div class="container-fluid px-lg-1-6 px-xl-2-5 px-xxl-2-9">
                     <div class="row align-items-center">
@@ -76,7 +421,7 @@
                                 <nav class="navbar navbar-expand-lg navbar-light p-0">
                                     <div class="navbar-header navbar-header-custom">
                                         <!-- start logo -->
-                                        <a href="index.html" class="navbar-brand"><img id="logo" src="img/logos/logo-inner.png" alt="logo"></a>
+                                        <a href="./index.html" class="navbar-brand logochange"><img id="logo" src="./logo1.png" alt="logo"></a>
                                         <!-- end logo -->
                                     </div>
 
@@ -84,36 +429,27 @@
 
                                     <!-- start menu area -->
                                     <ul class="navbar-nav ms-auto" id="nav" style="display: none;">
-                                        <li><a href="#">Home</a>
-                                            <ul>
+                                        <li><a href="index.html">Home</a>
+                                            <!-- <ul>
                                                 <li><a href="index.html">Home 01</a></li>
                                                 <li><a href="index-02.html">Home 02 - Dark Menu</a></li>
                                                 <li><a href="index-03.html">Home 03</a></li>
+                                            </ul> -->
+                                        </li>
+                                        <li>
+                                            <a href="about.html">About Us</a>
+                                            <ul>
+                                                <li><a href="about.html">The Company</a></li>
+                                                <li><a href="our-peoples.html"> Our People </a></li>
+                                                <li><a href="history.html"> History</a></li>
+                                              
+                                                <li><a href="certifications.html">Certifications</a></li>
+                                                
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">Pages</a>
-                                            <ul>
-                                                <li><a href="about.html">About Us</a></li>
-                                                <li><a href="how-we-work.html">How We Work</a></li>
-                                                <li><a href="faq.html">FAQ's</a></li>
-                                                <li>
-                                                    <a href="#">Our Team</a>
-                                                    <ul>
-                                                        <li><a href="team.html">Our Team</a></li>
-                                                        <li><a href="team-details.html">Team Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="pricing.html">Pricing Plans</a></li>
-                                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                                                <li><a href="404-page.html">404 Page</a></li>
-                                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Services</a>
-                                            <ul>
+                                            <a href="#"> Infrastructure</a>
+                                            <!-- <ul>
                                                 <li><a href="services.html">Our Services</a></li>
                                                 <li><a href="oil-gas-engineering.html">Oil & Gas Engineering</a></li>
                                                 <li><a href="mechanical-engineering.html">Mechanical Engineering</a></li>
@@ -121,11 +457,11 @@
                                                 <li><a href="chemical-research.html">Chemical Research</a></li>
                                                 <li><a href="industrial-construction.html">Industrial Construction</a></li>
                                                 <li><a href="civil-engineering.html">Civil Engineerin</a></li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
                                         <li>
-                                            <a href="#">Portfolio</a>
-                                            <ul>
+                                            <a href="#"> Success Stories</a>
+                                            <!-- <ul>
                                                 <li><a href="#">Portfolio Grid</a>
                                                     <ul>
                                                         <li><a href="portfolio-two-columns.html">2 Columns</a></li>
@@ -134,11 +470,11 @@
                                                     </ul>
                                                 </li>
                                                 <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
                                         <li>
-                                            <a href="#">Blog</a>
-                                            <ul>
+                                            <a href="#"> Portfolio</a>
+                                            <!-- <ul>
                                                 <li><a href="#">Blog Grid</a>
                                                     <ul>
                                                         <li><a href="blog-grid-two-columns.html">2 Columns</a></li>
@@ -149,17 +485,17 @@
                                                 </li>
                                                 <li><a href="blog-list.html">Blog List</a></li>
                                                 <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="">Corporate CSR</a></li>
                                     </ul>
                                     <!-- end menu area -->
 
                                     <!-- start attribute navigation -->
                                     <div class="attr-nav align-items-xl-center ms-xl-auto main-font">
                                         <ul>
-                                            <li class="search"><a href="#"><i class="fas fa-search"></i></a></li>
-                                            <li class="d-none d-xl-inline-block"><a href="contact.html" class="btn-style1 white-hover small"><span>Free Quote</span></a></li>
+                                           
+                                            <li class="d-none d-xl-inline-block"><a href="contact.html" class="btn-style1 white-hover small"><span>Contact Us</span></a></li>
                                         </ul>
                                     </div>
                                     <!-- end attribute navigation -->
@@ -170,144 +506,209 @@
                 </div>
             </div>
         </header>
-
         <!-- PAGE TITLE
         ================================================== -->
-        <section class="page-title-section top-position1 bg-img cover-background left-overlay-secondary" data-overlay-dark="85" data-background="img/banner/page-title-01.jpg">
+        <section class="page-title-section top-position1 bg-img cover-background left-overlay-secondary" data-overlay-dark="85" data-background="https://t3.ftcdn.net/jpg/08/09/32/68/360_F_809326819_GzuDRziEIOugchp8ig1qCCtNjWNwwAi5.jpg">
             <div class="container">                
-                <h1>About Us</h1>
+                <h1></h1>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>About Us</li>
+                  
                 </ul>                
             </div>
         </section>
 
-        <!-- ABOUT US
-        ================================================== -->
-        <section class="about-style-02 pb-lg-20">
-            <div class="container">
-                <div class="row align-items-center justify-content-center mt-n1-9 mt-md-n6">
-                    <div class="col-lg-6 mt-1-9 mt-md-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="100ms">
-                        <div class="pe-lg-6 pe-xl-10">
-                            <div class="section-title-01 mb-1-9">
-                                <span class="text-primary font-weight-600 text-uppercase letter-spacing-1 position-relative ps-2">About Us</span>
-                                <h2 class="display-5 lh-1 font-weight-800 mb-0">A modern construction & industrial agency</h2>
+
+        
+
+
+
+ <section class="about-section d-flex align-items-center" style="padding: 50px 0px 20px 0px;">
+        <div class="decorative-shape shape-1"></div>
+        <div class="decorative-shape shape-2"></div>
+        
+        <div class="container content-wrapper py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 about-content">
+                    <div class="badge-pill">Who We Are</div>
+                    <h1 class="about-title">Star Industries- Precision in <span class="title-highlight">Every Component</span> </h1>
+                    <p class="about-subtitle">
+                       Star Industries is a leading manufacturer of high-precision Sheet Metal Press and Machined Components
+                    </p>
+                    <p class="about-text" >
+Founded in 2014, Star Industries is a trusted manufacturer of Sheet Metal Press and Machined Components, driven by a skilled technical team committed to precision and quality. Based in the Chakan–Pune Industrial Area, our ISO 9001:2015 certified facility uses advanced technology to deliver reliable, high-quality products. We aim to be a leading supplier through continuous innovation and customer satisfaction.                    </p>
+                    
+                    
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M9 11l3 3L22 4"></path>
+                                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                                </svg>
                             </div>
-                            <p class="mb-1-9 display-28">From investigation and creation to transportation and refining, we offer a large number of items and administrations that meet the extraordinary requirements of the oil and gas industry.</p>
-                            <div class="d-flex align-items-center">
-                                <a href="#" class="btn-style1 me-4"><span><span class="btn-small">Read More</span></span></a>
-                                <a href="#" class="display-27 text-dark font-weight-700"><i class="fa-solid fa-phone-volume text-primary me-2"></i>1 800 222 000</a>
+                            <span class="feature-text">ISO 9001:2015 certified for consistent quality and reliability.
+</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                </svg>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-1-9 mt-md-6 order-1 order-lg-2 wow fadeIn" data-wow-delay="150ms">
-                        <div class="about-image position-relative">
-                            <div class="text-md-end">
-                                <img src="img/content/about-06.jpg" alt="..." class="rounded">
+                            <span class="feature-text">Experts in Sheet Metal Press and Machined Components </span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path>
+                                </svg>
                             </div>
-                            <div class="about-img-text ani-top-bottom d-none d-md-block">
-                                <span>Started in</span>
-                                <p class="mb-0 text-primary">1995</p>
+                            <span class="feature-text">Committed to innovation, on-time delivery, customer satisfaction.</span>
+                        </li>
+                    </ul>
+
+                    <div class="stats-container">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number">11+</span>
+                                <span class="stat-label">Years Experience</span>
                             </div>
-                            <div class="about-img-one ani-top-bottom d-none d-md-block">
-                                <img src="img/content/about-07.jpg" alt="..." class="rounded">
+                            <div class="stat-item">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Projects Delivered</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Client Satisfaction</span>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="col-lg-6 image-wrapper">
+                    <div class="image-container">
+                        <div class="image-card">
+                            <img src="img/banner/about-image.png" 
+                                 alt="Our Team Collaboration" 
+                                 class="about-image">
+                        </div>
+                        <div class="floating-badge">
+                            <span class="badge-number">A+</span>
+                            <span class="badge-text">Top Rated Agency</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const aboutContent = document.querySelector('.about-content');
+            const imageWrapper = document.querySelector('.image-wrapper');
+            
+            observer.observe(aboutContent);
+            observer.observe(imageWrapper);
+
+            // Animate feature items
+            const featureItems = document.querySelectorAll('.feature-item');
+            featureItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                setTimeout(() => {
+                    item.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, 800 + (index * 150));
+            });
+
+            // Counter animation for stats
+            const animateCounter = (el) => {
+                const text = el.textContent;
+                const isPercentage = text.includes('%');
+                const target = parseInt(text);
+                let current = 0;
+                const increment = target / 60;
+                const duration = 2000;
+                const stepTime = duration / 60;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        el.textContent = target + (isPercentage ? '%' : '+');
+                        clearInterval(timer);
+                    } else {
+                        el.textContent = Math.floor(current) + (isPercentage ? '%' : '+');
+                    }
+                }, stepTime);
+            };
+
+            // Observe stats container
+            const statObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const numbers = entry.target.querySelectorAll('.stat-number');
+                        numbers.forEach((num, index) => {
+                            setTimeout(() => animateCounter(num), index * 200);
+                        });
+                        statObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const statsContainer = document.querySelector('.stats-container');
+            if (statsContainer) {
+                statObserver.observe(statsContainer);
+            }
+
+            // Subtle parallax on decorative shapes
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        const scrolled = window.pageYOffset;
+                        const shapes = document.querySelectorAll('.decorative-shape');
+                        shapes.forEach((shape, index) => {
+                            const speed = (index + 1) * 0.3;
+                            shape.style.transform = `translateY(${scrolled * speed}px)`;
+                        });
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        });
+    </script>
+
 
         <!-- EXTRA
         ================================================== -->
-        <section class="extra-style02 bg-img cover-background pb-0 pt-24 overflow-visible" data-overlay-dark="3" data-background="img/bg/bg-02.jpg">
-            <div class="container">
-                <div class="row pt-lg-24">
-                    <div class="col-lg-7 col-xl-6">
-                        <div class="row pt-sm-6 pt-md-10 pt-xxl-20">
-                            <div class="col-sm-6 col-xxl-5 wow fadeIn" data-wow-delay="100ms">
-                                <div class="extra-counter-box rounded-top">
-                                    <h2 class="display-6 mb-3 font-weight-600 text-white lh-1"><span class="countup">426</span></h2>
-                                    <p class="mb-0 text-white display-29">Experienced Workers</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-xxl-5 wow fadeIn" data-wow-delay="150ms">
-                                <div class="extra-counter-box bg-secondary rounded-top">
-                                    <h2 class="display-6 mb-3 font-weight-600 text-white lh-1"><span class="countup">4</span>K</h2>
-                                    <p class="mb-0 text-white display-29">Project Complete</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+     
 
         <!-- FAQ
         ================================================== -->
-        <section>
-            <div class="container">
-                <div class="row mt-n2-9">
-                    <div class="col-lg-6 mt-2-9 wow fadeIn" data-wow-delay="100ms">
-                        <div class="pe-lg-7">
-                            <div class="section-title-01 mb-1-9">
-                                <span class="text-primary font-weight-600 text-uppercase letter-spacing-1 position-relative ps-2">Faq</span>
-                                <h2 class="display-5 lh-1 font-weight-800 mb-0">Solutions for residentials & industries!</h2>
-                            </div>
-                            <p class="mb-1-9">Constructor clarifies how you can appreciate top of the line flooring patterns like finished wood and with new cover flooring.</p>
-                            <a href="about.html" class="btn-style1"><span>Learn More</span></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-2-9 wow fadeIn" data-wow-delay="150ms">
-                        <div>
-                            <div id="accordion" class="accordion-style">
-                                <div class="card mb-3">
-                                    <div class="card-header" id="headingOne">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">1. Where i can find instructions to technology process?</button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
-                                        <div class="card-body">
-                                            We are committed to providing our customers with exceptional service while offering our employees the best training. There are many variations of passages of lorem ipsum is simply free text.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card mb-3">
-                                    <div class="card-header" id="headingTwo">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">2. How to work with industrium?</button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
-                                        <div class="card-body">
-                                            We are committed to providing our customers with exceptional service while offering our employees the best training. There are many variations of passages of lorem ipsum is simply free text.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">3. Basic part of property for human life?</button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
-                                        <div class="card-body">
-                                            We are committed to providing our customers with exceptional service while offering our employees the best training. There are many variations of passages of lorem ipsum is simply free text.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+      
         <!-- TESTIMONIAL
         ================================================== -->
-        <section class="pb-0 pt-24 ms-lg-10 item bg-img overflow-visible cover-background rounded-start" data-background="img/bg/bg-03.jpg">
+        <!-- <section class="pb-0 pt-24 ms-lg-10 item bg-img overflow-visible cover-background rounded-start" data-background="https://t4.ftcdn.net/jpg/04/14/64/67/360_F_414646742_t7nWYogI5DEMhATZeR1njqKzHU6Sxeug.jpg">
             <div class="container">
                 <div class="row justify-content-end">
                     <div class="col-lg-8 col-xl-6">
@@ -334,403 +735,640 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- OUR TEAM
         ================================================== -->
-        <section class="pt-20">
-            <div class="container">
-                <div class="section-title-01 mb-5 text-center wow fadeIn" data-wow-dela="100ms">
-                    <span class="text-primary font-weight-600 text-uppercase letter-spacing-1 position-relative ps-2">Our Team</span>
-                    <h2 class="display-5 lh-1 font-weight-800 mb-0 w-md-80 w-lg-65 w-xl-55 w-xxl-50 mx-auto">We have gathered the best group to work with you</h2>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            overflow-x: hidden;
+        } */
+        
+        .mission-vision-section {
+            padding: 0px 0;
+            position: relative;
+                        background: linear-gradient(135deg, #ffffff 0%, #e8eef5 100%);
+
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            color: #6c757d;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .mission-vision-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .mission-card, .vision-card {
+            flex: 1;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            transition: all 0.5s ease;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .mission-card:hover, .vision-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+        }
+        
+        .card-image {
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .mission-card:hover .card-image img,
+        .vision-card:hover .card-image img {
+            transform: scale(1.1);
+        }
+        
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+        
+        .mission-card .card-overlay {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%);
+        }
+        
+        .vision-card .card-overlay {
+            background: linear-gradient(135deg, rgba(250, 112, 154, 0.85) 0%, rgba(254, 225, 64, 0.85) 100%);
+        }
+        
+        .card-icon {
+            font-size: 4rem;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        .card-content {
+            padding: 35px 30px;
+        }
+        
+        .card-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .mission-card .card-title {
+            color: #667eea;
+        }
+        
+        .vision-card .card-title {
+            color: #fa709a;
+        }
+        
+        .card-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        
+        .mission-card .card-title::after {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .vision-card .card-title::after {
+            background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .mission-card:hover .card-title::after,
+        .vision-card:hover .card-title::after {
+            width: 100px;
+        }
+        
+        .card-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #495057;
+            margin-bottom: 25px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            font-size: 0.95rem;
+            color: #6c757d;
+            position: relative;
+            padding-left: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-list li:hover {
+            color: #495057;
+            transform: translateX(5px);
+        }
+        
+        .feature-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: white;
+        }
+        
+        .mission-card .feature-list li::before {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .vision-card .feature-list li::before {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .mission-card .stat-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        }
+        
+        .vision-card .stat-box {
+            background: linear-gradient(135deg, rgba(250, 112, 154, 0.1) 0%, rgba(254, 225, 64, 0.1) 100%);
+        }
+        
+        .stat-box:hover {
+            transform: scale(1.05);
+        }
+        
+        /* .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+         */
+        .mission-card .stat-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .vision-card .stat-number {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: #6c757d;
+            font-weight: 500;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        /* Tablet Styles */
+        @media (max-width: 992px) {
+            .mission-vision-row {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .section-header p {
+                font-size: 1rem;
+            }
+            
+            .card-image {
+                height: 220px;
+            }
+            
+            .card-icon {
+                font-size: 3rem;
+            }
+            
+            .card-content {
+                padding: 25px 20px;
+            }
+            
+            .card-title {
+                font-size: 1.6rem;
+            }
+            
+            .card-text {
+                font-size: 0.95rem;
+            }
+            
+            .feature-list li {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .mission-vision-section {
+                padding: 50px 0;
+            }
+            
+            .section-header {
+                margin-bottom: 40px;
+            }
+            
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+            
+            .card-image {
+                height: 200px;
+            }
+            
+            .card-content {
+                padding: 20px 15px;
+            }
+            
+            .card-title {
+                font-size: 1.4rem;
+            }
+            
+            .stat-number {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+
+
+     <section class="mission-vision-section" >
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2> </h2>
+                                    <h1 class="about-title">Our Mission <span class="title-highlight">& Vision</span> </h1>
+                <p>Shaping the Future with Innovation, Quality, and Commitment</p>
+
+            </div>
+            
+            <!-- Mission & Vision Cards Side by Side -->
+            <div class="mission-vision-row">
+                <!-- Mission Card -->
+                <div class="mission-card">
+                    <div class="card-image">
+                        <img src="https://img.freepik.com/premium-vector/cartoon-style-industrial-factory-building-with-adjacent-warehouses-production-halls-illustration-game-style-manufacturing-facility-industrial-complex-workshop-scene-clipart_543062-11047.jpg?semt=ais_hybrid&w=740&q=80">
+                        <!-- <div class="card-overlay">
+                            <i class="fas fa-bullseye card-icon"></i>
+                        </div> -->
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Our Mission</h3>
+                        <p class="card-text">
+                           Our mission is to develop and deliver high-quality, precision-engineered products at competitive prices, while fostering a culture that supports sustainability, innovation, and customer satisfaction.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Maintaining the highest standards of product quality.</li>
+                            <li>Encouraging environmentally responsible practices</li>
+                            <li>Continuously improving efficiency and productivity.</li>
+                            <li>Empowering our team to achieve operational excellence.</li>
+                        </ul>
+                        <div class="stat-box">
+                            <span class="stat-number">99.8%</span>
+                            <span class="stat-label">Quality Rate</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="row mt-n1-9">
-                    <div class="col-md-6 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="100ms">
-                        <div class="card card-style07 border-0">
-                            <div class="team-before-hover">
-                                <div class="team-img rounded-top">
-                                    <img src="img/team/team-01.jpg" alt="..." class="rounded-top">
-                                </div>
-                            </div>
-                            <div class="card-body position-relative">
-                                <div class="team-social">
-                                    <div class="icon-share">
-                                        <i class="fa fa-share-alt"></i>
-                                        <div class="icons-social">
-                                            <ul>
-                                                <li><a href="https://www.facebook.com/" target="_blank"><i class="ti-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com/" target="_blank"><i class="ti-twitter-alt"></i></a></li>
-                                                <li><a href="https://www.instagram.com/" target="_blank"><i class="ti-instagram"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 class="h5 mb-1"><a href="team-details.html">Senay Ambessa</a></h3>
-                                <span>CO-Founder</span>
-                            </div>
-                        </div>
+                
+                <!-- Vision Card -->
+                <div class="vision-card">
+                    <div class="card-image">
+                        <img src="https://img.freepik.com/premium-vector/cartoon-workers-factory-with-large-metal-barrel_1047188-63176.jpg" alt="Our Vision">
+                        
                     </div>
-                    <div class="col-md-6 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="150ms">
-                        <div class="card card-style07 border-0">
-                            <div class="team-before-hover">
-                                <div class="team-img rounded-top">
-                                    <img src="img/team/team-02.jpg" alt="..." class="rounded-top">
-                                </div>
-                            </div>
-                            <div class="card-body position-relative">
-                                <div class="team-social">
-                                    <div class="side-icons">
-                                        <div class="icon-share">
-                                            <i class="fa fa-share-alt"></i>
-                                            <div class="icons-social">
-                                                <ul>
-                                                    <li><a href="https://www.facebook.com/" target="_blank"><i class="ti-facebook"></i></a></li>
-                                                    <li><a href="https://twitter.com/" target="_blank"><i class="ti-twitter-alt"></i></a></li>
-                                                    <li><a href="https://www.instagram.com/" target="_blank"><i class="ti-instagram"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 class="h5 mb-1"><a href="team-details.html">Amina Abdullah</a></h3>
-                                <span>Head of Production</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="200ms">
-                        <div class="card card-style07 border-0">
-                            <div class="team-before-hover">
-                                <div class="team-img rounded-top">
-                                    <img src="img/team/team-03.jpg" alt="..." class="rounded-top">
-                                </div>
-                            </div>
-                            <div class="card-body position-relative">
-                                <div class="team-social">
-                                    <div class="side-icons">
-                                        <div class="icon-share">
-                                            <i class="fa fa-share-alt"></i>
-                                            <div class="icons-social">
-                                                <ul>
-                                                    <li><a href="https://www.facebook.com/" target="_blank"><i class="ti-facebook"></i></a></li>
-                                                    <li><a href="https://twitter.com/" target="_blank"><i class="ti-twitter-alt"></i></a></li>
-                                                    <li><a href="https://www.instagram.com/" target="_blank"><i class="ti-instagram"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 class="h5 mb-1"><a href="team-details.html">Girmay Hamid</a></h3>
-                                <span>Contractor</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3 mt-1-9 wow fadeIn" data-wow-delay="250ms">
-                        <div class="card card-style07 border-0">
-                            <div class="team-before-hover">
-                                <div class="team-img rounded-top">
-                                    <img src="img/team/team-04.jpg" alt="..." class="rounded-top">
-                                </div>
-                            </div>
-                            <div class="card-body position-relative">
-                                <div class="team-social">
-                                    <div class="side-icons">
-                                        <div class="icon-share">
-                                            <i class="fa fa-share-alt"></i>
-                                            <div class="icons-social">
-                                                <ul>
-                                                    <li><a href="https://www.facebook.com/" target="_blank"><i class="ti-facebook"></i></a></li>
-                                                    <li><a href="https://twitter.com/" target="_blank"><i class="ti-twitter-alt"></i></a></li>
-                                                    <li><a href="https://www.instagram.com/" target="_blank"><i class="ti-instagram"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 class="h5 mb-1"><a href="team-details.html">Yohannes Efrem</a></h3>
-                                <span>Sr. Manager</span>
-                            </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Our Vision</h3>
+                        <p class="card-text">
+                          Star Industries Manufacturing, our vision is to carry forward our legacy and establish ourselves as a leading Indian manufacturer recognized for excellence, innovation, and uncompromising quality in every product we deliver.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Setting new benchmarks in manufacturing excellence.</li>
+                            <li>Building long-term trust through superior quality and reliability.</li>
+                            <li>Adopting modern technologies for continuous improvement</li>
+                            <li>Expanding our reach to serve global markets with pride.</li>
+                        </ul>
+                        <div class="stat-box">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Countries Served</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.mission-card, .vision-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.8s ease';
+            observer.observe(card);
+        });
+        
+        // Counter animation
+        const animateCounter = (el) => {
+            const text = el.textContent;
+            const target = parseFloat(text);
+            const isPercent = text.includes('%');
+            const isPlus = text.includes('+');
+            
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    el.textContent = target + (isPercent ? '%' : isPlus ? '+' : '');
+                    clearInterval(timer);
+                } else {
+                    el.textContent = Math.floor(current) + (isPercent ? '%' : isPlus ? '+' : '');
+                }
+            }, 30);
+        };
+        
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const number = entry.target.querySelector('.stat-number');
+                    if (number && !number.classList.contains('animated')) {
+                        number.classList.add('animated');
+                        animateCounter(number);
+                    }
+                    statObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.stat-box').forEach(stat => {
+            statObserver.observe(stat);
+        });
+    </script>
 
         <!-- FOOTER
         ================================================== -->
-        <footer class="footer-style01 bg-secondary pt-10 pb-8">
-            <div class="container">
-                <div class="row mt-n2-9 mb-6">
-                    <div class="col-md-6 col-lg-4 mt-2-9">
-                        <div class="pe-md-1-6 pe-xxl-7">
-                            <div class="footer-logo mb-1-6">
-                                <a href="index.html"><img src="img/logos/footer-light-logo.png" alt="..."></a>
-                            </div>
-                            <p class="text-white mb-0 opacity8">We have 14+ years experience. Helping you overcome technology challenges. we are dedicated to provides the best solutions to our valued customers.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mt-2-9">
-                        <div class="ps-md-2-6 ps-xl-7">
-                            <h3 class="text-white h4 mb-2-4">Quick Links</h3>
-                            <div class="row">
-                                <div class="col-6">
-                                    <ul class="links-wrap list-unstyled mb-0">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="portfolio.html">Our Projects</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-6">
-                                    <ul class="links-wrap list-unstyled mb-0">
-                                        <li><a href="pricing.html">Pricing</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="blog-grid.html">Blog</a></li>
-                                        <li><a href="contact.html">Contacts</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mt-2-9">
-                        <div class="ps-lg-5">
-                            <h3 class="text-white h4 mb-2-4">Newsletter</h3>
-                            <p class="text-white mb-1-6 display-28 opacity8">Subscribe to our newsletter to receive updates on the latest news!</p>
-                            <form class="quform newsletter-form" action="quform/newsletter-two.php" method="post" enctype="multipart/form-data" onclick="">
+      <style>
+    .footer-style01 {
+  position: relative;
+  background: url('https://www.cxhctl.com/wp-content/uploads/2024/12/images.png') center center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
+}
 
-                                <div class="quform-elements">
-                                    <div class="row">
+.footer-style01 .footer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.611); /* light overlay */
+  backdrop-filter: brightness(0.7);
+  z-index: 1;
+}
 
-                                        <!-- Begin Text input element -->
-                                        <div class="col-md-12">
-                                            <div class="quform-element mb-0">
-                                                <div class="quform-input">
-                                                    <input class="form-control" id="email_address" type="text" name="email_address" placeholder="Subscribe with us">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Text input element -->
+.footer-style01 .container {
+  position: relative;
+  z-index: 2;
+}
 
-                                        <!-- Begin Submit button -->
-                                        <div class="col-md-12">
-                                            <div class="quform-submit-inner">
-                                                <button class="btn btn-white text-white m-0" type="submit"><i class="fas fa-paper-plane"></i></button>
-                                            </div>
-                                            <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
-                                        </div>
-                                        <!-- End Submit button -->
-                                    </div>
+/* link colors */
+.footer-style01 a {
+  color: #f1f1f1;
+  transition: color 0.3s ease;
+}
 
-                                </div>
+.footer-style01 a:hover {
+  color: #ffcc00;
+}
 
-                            </form>
-                        </div>
-                    </div>
-                </div>
+/* make text readable */
+.footer-style01 p,
+.footer-style01 h3 {
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+/* responsive tweak */
+@media (max-width: 768px) {
+  .footer-style01 {
+    text-align: center;
+  }
+}
+
+</style>
+
+        <!-- FOOTER
+        ================================================== -->
+       <footer class="footer-style01 pt-10 pb-8">
+  <div class="footer-overlay"></div> <!-- overlay layer -->
+  <div class="container position-relative">
+    <div class="row mt-n2-9 mb-6">
+      <div class="col-md-6 col-lg-4 mt-2-9">
+        <div class="pe-md-1-6 pe-xxl-7">
+          <h3 class="text-white h4 mb-2-4">About Us</h3>
+          <p class="text-white mb-0 opacity8">
+            Star Industries, established in 2014 in Chakan, Pune, is a trusted manufacturer of precision sheet metal press components and machined components. We specialize in producing high-quality parts for ferrous and non-ferrous metals, serving diverse industrial sectors with reliability and consistency.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mt-2-9">
+        <div class="ps-md-2-6 ps-xl-7">
+          <h3 class="text-white h4 mb-2-4">Quick Links</h3>
+          <div class="row">
+            <div class="col-6">
+              <ul class="links-wrap list-unstyled mb-0">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Our Projects</a></li>
+              </ul>
             </div>
-            <div class="container">
-                <div class="row mt-n4 align-items-center">
-                    <div class="col-lg-6 mt-4">
-                        <div class=" text-center text-lg-start">
-                            <p class="d-inline-block text-white mb-0">&copy; <span class="current-year"></span> Metary Powered by <a href="#" class="text-primary text-white-hover">Website Layout</a></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-4">
-                        <div class="text-center text-lg-end">
-                            <ul class="list-unstyled mb-0">
-                                <li class="display-30 d-inline-block border-end border-color-light-white pe-3 me-2 lh-1"><a href="terms-conditions.html" class="text-white text-primary-hover opacity7">Terms &amp; Conditions</a></li>
-                                <li class="display-30 d-inline-block lh-1"><a href="privacy-policy.html" class="text-white text-primary-hover opacity7">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-6">
+              <ul class="links-wrap list-unstyled mb-0">
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Team</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contacts</a></li>
+              </ul>
             </div>
-        </footer>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mt-2-9">
+        <div class="ps-lg-5">
+          <h3 class="text-white h4 mb-2-4">Newsletter</h3>
+          <p class="text-white mb-1-6 display-28 opacity8">
+            Subscribe to our newsletter to receive updates on the latest news!
+          </p>
+          <form class="quform newsletter-form" action="quform/newsletter-two.php" method="post" enctype="multipart/form-data">
+            <div class="quform-elements">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="quform-element mb-0">
+                    <div class="quform-input">
+                      <input class="form-control" id="email_address" type="text" name="email_address" placeholder="Subscribe with us">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="quform-submit-inner">
+                    <button class="btn btn-white text-white m-0" type="submit">
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </div>
+                  <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container position-relative">
+    <div class="row mt-n4 align-items-center">
+      <div class="col-lg-12 mt-4" style="display: flex; align-items: center; justify-content: center;">
+        <div class="text-center text-lg-start">
+          <p class="d-inline-block text-white mb-0">
+            &copy; <span class="current-year"></span> All Rights Reserved | Designed & Developed By 
+            <a href="#" class="text-primary text-white-hover" style="color: #fff !important;">Netcom Business Solutions Pvt Ltd</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
     </div>
 
     <!-- BUY THEME
     ================================================== -->
-    <div class="buy-theme alt-font d-none d-lg-inline-block"><a href="https://themeforest.net/item/metary-industry-factory-html-template/59328958" target="_blank"><i class="fas fa-cart-plus"></i><span>Purchase Metary Template</span></a></div> 
-
-    <div class="wlt-overlay-bg"></div>
-
-    <div class="wlt-sidebar-main" id="wlt-sidebar-main">
-
-        <div class="popular-theme alt-font d-none d-lg-inline-block wl-btn wlt-btn"><a href="#!"><i class="fa-solid fa-layer-group"></i><span>Popular Templates & More..</span></a></div>
-
-        <div class="wlt-sidebar-inner scrollbar-macosx" id="wlt-sidebar-inner">
-            <div class="wlt-banner-section">
-                <div class="wlt-heading">
-                    <h3><span>WordPress Version</span></h3>
-                </div>
-                <a href="https://metarypreview.websitelayout.net/" target="_blank">
-                    <span class="wlt-banner">
-                        <span class="wlt-img-hover">
-                            <img src="img/preview/metary-industry-factory-wordpress-theme.jpg" alt="Metary - Industry & Factory WordPress Theme">
-                        </span>
-                        <span class="wlt-banner-info">
-                            <span class="wlt-banner-name">
-                                <span class="wlt-proj-name">Metary WordPress Theme</span>
-                            </span>
-                            <span class="wlt-proj-price">
-                                <bdi><span>&#36;</span>59.00</bdi>
-                            </span>
-                        </span>
-                    </span>
-                </a>                
-                <div class="wlt-heading">
-                    <h3><span>Featured Theme</span></h3>
-                </div>
-                <a href="https://kargonhtml.websitelayout.net/" target="_blank">
-                    <span class="wlt-banner">
-                        <span class="wlt-img-hover">
-                            <img src="img/preview/kargon-transport-logistics-html-template.jpg" alt="Kargon - Transport and Logistics HTML Template">
-                        </span>
-                        <span class="wlt-banner-info">
-                            <span class="wlt-banner-name">
-                                <span class="wlt-proj-name">Kargon</span>
-                            </span>
-                            <span class="wlt-proj-price">
-                                <bdi><span>&#36;</span>19.00</bdi>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-                <a href="https://flywebhtml.websitelayout.net/" target="_blank">
-                    <span class="wlt-banner">
-                        <span class="wlt-img-hover">
-                            <img src="img/preview/flyweb-web-design-agency-html-template.jpg" alt="Flyweb - Web Design Agency HTML Template">
-                        </span>
-                        <span class="wlt-banner-info">
-                            <span class="wlt-banner-name">
-                                <span class="wlt-proj-name">Flyweb</span>
-                            </span>
-                            <span class="wlt-proj-price">
-                                <bdi><span>&#36;</span>19.00</bdi>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-                <div class="wlt-heading">
-                    <h3><span>Popular Theme</span></h3>
-                </div>
-                <a href="https://monityhtml.websitelayout.net/" target="_blank">
-                    <span class="wlt-banner">
-                        <span class="wlt-img-hover">
-                            <img src="img/preview/monity%E2%80%93cctv-security-html-template.jpg" alt="Monity – CCTV & Security HTML Template">
-                        </span>
-                        <span class="wlt-banner-info">
-                            <span class="wlt-banner-name">
-                                <span class="wlt-proj-name">Monity</span>
-                            </span>
-                            <span class="wlt-proj-price">
-                                <bdi><span>&#36;</span>19.00</bdi>
-                            </span>
-                        </span>
-                    </span>
-                </a>                
-                <a href="https://proliohtml.websitelayout.net/" target="_blank">
-                    <span class="wlt-banner">
-                        <span class="wlt-img-hover">
-                            <img src="img/preview/prolio-business-consulting-html-template.jpg" alt="Prolio - Business Consulting HTML Template">
-                        </span>
-                        <span class="wlt-banner-info">
-                            <span class="wlt-banner-name">
-                                <span class="wlt-proj-name">Prolio</span>
-                            </span>
-                            <span class="wlt-proj-price">
-                                <bdi><span>&#36;</span>19.00</bdi>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-                <a href="https://solutichtml.websitelayout.net/preview.html" target="_blank">
-                    <span class="wlt-banner">
-                        <span class="wlt-img-hover">
-                            <img src="img/preview/solutic-it-solutions-services-html-template.jpg" alt="Solutic - IT Solutions and Services HTML Template">
-                        </span>
-                        <span class="wlt-banner-info">
-                            <span class="wlt-banner-name">
-                                <span class="wlt-proj-name">Solutic</span>
-                            </span>
-                            <span class="wlt-proj-price">
-                                <bdi><span>&#36;</span>19.00</bdi>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-                <a href="https://habitrohtml.websitelayout.net/preview.html" target="_blank">
-                    <span class="wlt-banner">
-                        <span class="wlt-img-hover">
-                            <img src="img/preview/habitro-nutrition-health-diet-html-template.jpg" alt="Habitro - Nutrition Health and Diet HTML Template">
-                        </span>
-                        <span class="wlt-banner-info">
-                            <span class="wlt-banner-name">
-                                <span class="wlt-proj-name">Habitro</span>
-                            </span>
-                            <span class="wlt-proj-price">
-                                <bdi><span>&#36;</span>19.00</bdi>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-                <a href="https://topwebs.websitelayout.net/" target="_blank">
-                    <span class="wlt-banner">
-                        <span class="wlt-img-hover">
-                            <img src="img/preview/topweb-web-design-agency-html-template.jpg" alt="Topweb - Web Design Agency HTML Template">
-                        </span>
-                        <span class="wlt-banner-info">
-                            <span class="wlt-banner-name">
-                                <span class="wlt-proj-name">Topweb</span>
-                            </span>
-                            <span class="wlt-proj-price">
-                                <bdi><span>&#36;</span>19.00</bdi>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-                <a href="https://lifesthtml.websitelayout.net/preview.html" target="_blank">
-                    <span class="wlt-banner">
-                        <span class="wlt-img-hover">
-                            <img src="img/preview/lifest-insurance-agency-html-template.jpg" alt="Lifest - Insurance Agency HTML Template">
-                        </span>
-                        <span class="wlt-banner-info">
-                            <span class="wlt-banner-name">
-                                <span class="wlt-proj-name">Lifest</span>
-                            </span>
-                            <span class="wlt-proj-price">
-                                <bdi><span>&#36;</span>19.00</bdi>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-                <a href="https://renumahtml.websitelayout.net/" target="_blank">
-                    <span class="wlt-banner">
-                        <span class="wlt-img-hover">
-                            <img src="img/preview/renuma-solar-renewable-energy-html-template.jpg" alt="Renuma - Solar & Renewable Energy HTML Template">
-                        </span>
-                        <span class="wlt-banner-info">
-                            <span class="wlt-banner-name">
-                                <span class="wlt-proj-name">Renuma</span>
-                            </span>
-                            <span class="wlt-proj-price">
-                                <bdi><span>&#36;</span>19.00</bdi>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-
-        <div class="wlt-bottom-button">
-            <a class="wlt-link" href="mailto:websitelayout3@gmail.com" target="_blank">Any Query or Support? Please feel free to contact us at -    websitelayout3@gmail.com</a>
-        </div>
-
-    </div>
-
+   
     <!-- SCROLL TO TOP
     ================================================== -->
-    <div class="scroll-top-percentage"><span id="scroll-value"></span></div>
 
     <!-- all js include start -->
 
