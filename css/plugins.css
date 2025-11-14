@@ -49486,6 +49486,385 @@ header {
     color: #fff
 }
 
+  .title-highlight {
+      background: linear-gradient(135deg, #526ad4, #815ba6, #f093fb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 1200px) {
+
+      .section-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 968px) {
+
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+    }
+
+    @media (max-width: 640px) {
+
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+
+    }
+
+
+
+
+
+/* About-us  Banner */
+
+    .banner-section {
+            position: relative;
+            width: 100%;
+            height: 370px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://static.vecteezy.com/system/resources/previews/025/500/704/non_2x/the-cnc-milling-machine-cutting-the-metal-part-with-the-sparking-light-the-hi-technology-mold-and-die-manufacturing-process-cnc-machine-tool-in-a-metal-factory-cutting-metal-ai-generated-free-photo.jpg') center/cover no-repeat;
+            z-index: 1;
+            filter: brightness(1.1) contrast(1.05);
+        }
+
+        /* Enhanced red overlay - more transparent to show background */
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.336) 0%, 
+                rgba(0, 0, 0, 0.652) 30%,
+                rgba(10, 10, 10, 0.377) 100%);
+            z-index: 2;
+        }
+
+        /* Subtle pattern overlay */
+        .banner-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+         
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: #fff;
+            animation: fadeInUp 1.2s ease forwards;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .banner-icon {
+            width: 110px;
+            height: 110px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 5px solid rgba(255, 255, 255, 0.35);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(12px);
+            animation: iconFloat 4s ease-in-out infinite;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            flex-shrink: 0;
+        }
+
+        .banner-icon:hover {
+            transform: scale(1.15) rotate(180deg);
+            border-color: rgba(255, 255, 255, 0.65);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg); 
+            }
+            50% { 
+                transform: translateY(-10px) rotate(5deg); 
+            }
+        }
+
+        .banner-icon i {
+            font-size: 3.5rem;
+            color: #fff;
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+        }
+
+        .banner-title {
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 18px;
+            color: #fff;
+            text-shadow: 
+                0 3px 15px rgba(0, 0, 0, 0.4),
+                0 6px 30px rgba(0, 0, 0, 0.3),
+                0 1px 0 rgba(255, 255, 255, 0.1);
+            margin: 0;
+            line-height: 1;
+            position: relative;
+            padding-left: 18px;
+            font-family: 'Poppins' ;
+        }
+
+        /* Animated underline */
+        .banner-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.7);
+            animation: expandLine 1.5s ease forwards 0.5s;
+        }
+
+        @keyframes expandLine {
+            to {
+                width: 200px;
+            }
+        }
+
+        /* Decorative geometric elements */
+        .banner-decoration {
+            position: absolute;
+            z-index: 2;
+            opacity: 0.15;
+        }
+
+        .decoration-1 {
+            top: 10%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+
+        .decoration-2 {
+            bottom: 15%;
+            right: 8%;
+            width: 100px;
+            height: 100px;
+            border: 3px solid #fff;
+            transform: rotate(45deg);
+            animation: rotateReverse 25s linear infinite;
+        }
+
+        .decoration-3 {
+            top: 20%;
+            right: 15%;
+            width: 60px;
+            height: 60px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes rotateReverse {
+            from { transform: rotate(45deg); }
+            to { transform: rotate(405deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.15; }
+            50% { transform: scale(1.2); opacity: 0.25; }
+        }
+
+
+
+
+
+         @media (max-width: 991px) {
+            .banner-section {
+                height: 400px;
+            }
+
+            .banner-icon {
+                width: 90px;
+                height: 90px;
+            }
+
+            .banner-icon i {
+                font-size: 3rem;
+            }
+
+            .banner-title {
+                font-size: 4.5rem;
+                letter-spacing: 12px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 767px) {
+            .banner-section {
+                height: 350px;
+            }
+
+            .banner-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .banner-icon {
+                width: 80px;
+                height: 80px;
+                border-width: 4px;
+            }
+
+            .banner-icon i {
+                font-size: 2.5rem;
+            }
+
+            .banner-title {
+                font-size: 3rem;
+                letter-spacing: 8px;
+                padding-left: 8px;
+            }
+
+            .banner-title::after {
+                width: 120px;
+            }
+
+            .decoration-1,
+            .decoration-2,
+            .decoration-3 {
+                display: none;
+            }
+
+            .content-section {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-description {
+                font-size: 1rem;
+            }
+
+            .feature-card {
+                padding: 30px;
+            }
+
+            .feature-grid {
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-section {
+                height: 300px;
+            }
+
+            .banner-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .banner-icon i {
+                font-size: 2rem;
+            }
+
+            .banner-title {
+                font-size: 2.2rem;
+                letter-spacing: 6px;
+            }
+
+            .banner-title::after {
+                width: 80px;
+                height: 3px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .navbar-nav li a {
     display: block;
     color: #9d9d9d;
@@ -49507,12 +49886,12 @@ header {
 .navbar-nav>li>a {
     position: relative;
     display: block;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     padding: 21px 0.5rem;
     color: #191919;
     letter-spacing: 0.8px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
     transition-duration: 500ms

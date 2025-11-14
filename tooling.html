@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,14 +8,14 @@
     <meta name="author" content="Website Layout">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Industry & Factory HTML Template">
-    <meta name="description" content=".">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
 
     <!-- title  -->
     <title>Star Industries</title>
 
     <!-- favicon -->
-   
+
 
     <!-- plugins -->
     <link rel="stylesheet" href="css/plugins.css">
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/scrollbar.css">
 
     <!-- theme core css -->
-    <link href="css/styles.css" rel="stylesheet">    
+    <link href="css/styles.css" rel="stylesheet">
 
 </head>
 
@@ -38,7 +38,7 @@
 
     <!-- PAGE LOADING
     ================================================== -->
-    <div id="preloader"></div>
+   
 
     <!-- MAIN WRAPPER
     ================================================== -->
@@ -146,19 +146,15 @@
 
         <!-- PAGE TITLE
         ================================================== -->
-          <!-- <section style="padding: 90px 0 90px 0;" class="page-title-section top-position1 bg-img cover-background left-overlay-secondary" data-overlay-dark="85" data-background="img/banner/6753d5f613.jpg">
-            <div class="container">                
-                <h1>Our History</h1>
-                <ul>
-                  
-                </ul>                
+        <!-- <section class="page-title-section top-position1 bg-img cover-background left-overlay-secondary"
+            data-overlay-dark="85" data-background="img/banner/6753d5f613.jpg">
+            <div class="container">
+                
+
             </div>
         </section> -->
 
-
-              <style>
-                    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
+        <style>
             .banner-section {
             position: relative;
             width: 100%;
@@ -268,7 +264,7 @@
             font-size: 4rem;
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 10px;
+            letter-spacing: 18px;
             color: #fff;
             text-shadow: 
                 0 3px 15px rgba(0, 0, 0, 0.4),
@@ -476,61 +472,524 @@
             <div class="banner-icon">
                 <i class="fas fa-cog"></i>
             </div>
-            <h1 class="banner-title">Our History </h1>
+            <h1 class="banner-title">TOOLING</h1>
         </div>
     </section>
+        
 
-        <!-- HISTORY
-        ================================================== -->
-        <section>
-            <div class="container">
-                <div class="section-title-01 mb-5 text-center">
-                    <!-- <span class="text-primary font-weight-600 text-uppercase letter-spacing-1 position-relative ps-2">Our History</span> -->
-                    <h2 class="display-5 lh-1 font-weight-800 mb-0 w-md-80 w-lg-65 w-xl-55 w-xxl-50 mx-auto">How we started</h2>
+
+
+         <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+      
+        body {
+            font-family: 'Poppins', sans-serif !important;
+            min-height: 100vh;
+           
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        /* body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 183, 197, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(167, 216, 255, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(255, 218, 185, 0.4) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+            z-index: -1;
+        } */
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+
+        .split-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 30px;
+            overflow: hidden;
+            max-width: 1400px;
+            margin: 0 auto;
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 1);
+        }
+
+        .image-side {
+            position: relative;
+            height: 100%;
+            min-height: 700px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            background: linear-gradient(135deg, #9081e53f 0%, #e6e3ed88 50%, #ffffff 100%);
+        }
+
+        .image-side::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(241, 239, 239, 0.3) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-20px, -20px) scale(1.1); }
+        }
+
+        .image-wrapper {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transform: perspective(1000px) rotateY(0deg);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 3px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .image-wrapper:hover {
+            transform: perspective(1000px) rotateY(-5deg) translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(168, 237, 234, 0.3) 0%, rgba(254, 214, 227, 0.3) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .image-wrapper:hover::after {
+            opacity: 1;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .image-wrapper:hover img {
+            transform: scale(1.1);
+        }
+
+        .content-side {
+            padding: 40px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .info-block {
+            margin-bottom: 50px;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .info-block .badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            color: #fff;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
+        }
+
+        /* .info-block h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        } */
+
+        .info-block p {
+            font-size: 1.15rem;
+            color: #5a5a5a;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .highlights-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 28px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            border-radius: 18px;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: calc(var(--index) * 0.1s);
+            opacity: 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-item:nth-child(1) { --index: 1; }
+        .highlight-item:nth-child(2) { --index: 2; }
+        .highlight-item:nth-child(3) { --index: 3; }
+        .highlight-item:nth-child(4) { --index: 4; }
+
+        .highlight-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .highlight-item:hover::before {
+            left: 100%;
+        }
+
+        .highlight-item:hover {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: rgba(168, 237, 234, 0.8);
+            transform: translateX(10px) scale(1.02);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 1);
+        }
+
+        .highlight-icon-wrapper {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 8px 20px rgba(168, 237, 234, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .highlight-icon-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .highlight-item:hover .highlight-icon-wrapper {
+            transform: rotateY(360deg) scale(1.1);
+        }
+
+        .highlight-item:hover .highlight-icon-wrapper::after {
+            opacity: 0.5;
+            filter: blur(10px);
+        }
+
+        .highlight-icon-wrapper i {
+            font-size: 1.5rem;
+            color: #667eea;
+            transition: transform 0.4s ease;
+        }
+
+        .highlight-item:hover .highlight-icon-wrapper i {
+            transform: scale(1.2);
+        }
+
+        .highlight-content h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .highlight-content p {
+            font-size: 1rem;
+            color: #718096;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Decorative elements */
+        .decorative-circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 183, 197, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            top: -100px;
+            right: -100px;
+        }
+
+        .circle-2 {
+            bottom: -150px;
+            left: -150px;
+            animation-delay: 5s;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 991px) {
+            .image-side {
+                min-height: 500px;
+                padding: 30px;
+            }
+
+            .content-side {
+                padding: 50px 35px;
+            }
+
+            .info-block h2 {
+                font-size: 2.2rem;
+            }
+
+            .info-block p {
+                font-size: 1.05rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+           
+
+            .split-section {
+                border-radius: 20px;
+            }
+
+            .image-side {
+                min-height: 400px;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .content-side {
+                padding: 40px 25px;
+            }
+
+            .info-block {
+                margin-bottom: 35px;
+            }
+
+            .info-block h2 {
+                font-size: 1.9rem;
+            }
+
+            .info-block p {
+                font-size: 1rem;
+            }
+
+            .highlight-item {
+                padding: 22px;
+                gap: 16px;
+            }
+
+            .highlight-icon-wrapper {
+                width: 50px;
+                height: 50px;
+            }
+
+            .highlight-content h4 {
+                font-size: 1.1rem;
+            }
+
+            .highlight-content p {
+                font-size: 0.95rem;
+            }
+
+            .decorative-circle {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+
+
+  <div class="container-fluid px-3 px-lg-4" style="padding: 50px 0px;">
+        <div class="split-section">
+            <div class="row g-0">
+                <!-- Left Side: Images -->
+                <div class="col-lg-5">
+                    <div class="image-side">
+                        <div class="image-wrapper">
+                            <img src="https://leadrp.net/wp-content/uploads/2022/02/CNC-Machining-1200x628-15.jpg" alt="Creative workspace">
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="https://leadrp.net/wp-content/uploads/2022/03/common-types-of-CNC-machine-900x600.jpg" alt="Innovative team">
+                        </div>
+                    </div>
                 </div>
-                <div class="history-carousel owl-carousel owl-theme">
-                    <div class="history-timeline">
-                        <div class="timeline-flag"></div>
-                        <div class="me-md-4 me-xl-5">
-                            <span class="history-year">2000</span>
-                            <img src="img/content/history-01.jpg" class="mb-4 rounded" alt="...">
-                            <h3 class="h4">Among the Top 100 Companies</h3>
-                            <p class="mb-0">We’re committed to providing customers exceptional service offering employees the best training.</p>
+<style>
+     .title-highlight {
+      color: linear-gradient(135deg, #526ad4, #815ba6, #f093fb) !important ;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-title {
+      font-size: 2.4rem ;
+      font-weight: 800;
+      color: #1e293b !important;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.2 !important;
+    }
+
+    @media (max-width: 1200px) {
+
+      .section-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 968px) {
+
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+    }
+
+    @media (max-width: 640px) {
+
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+
+    }
+</style>
+                <!-- Right Side: Content -->
+                <div class="col-lg-7">
+                    <div class="content-side">
+                        <div class="decorative-circle circle-1"></div>
+                        <div class="decorative-circle circle-2"></div>
+
+                        <!-- Info Block -->
+                        <div class="info-block">
+                            <!-- <span class="badge">Why Choose Us</span> -->
+                            <h2 class="section-title">  Advanced Tooling Capabilities <span class=" title-highlight">at Star Industriels</span></h2>
+                            <p>At Star Industriels, we pride ourselves on our state-of-the-art in-house tooling capabilities, driven by a dedicated team of over 25 skilled professionals. Under the visionary leadership of our CEO, MR. BALCHANDRA CHOUGULE, we leverage advanced VMC, CNC EDM, and conventional machining technologies to deliver precision automotive tools and fixtures that meet the highest international standards.</p>
                         </div>
-                    </div>
-                    <div class="history-timeline">
-                        <div class="timeline-flag"></div>
-                        <div class="me-md-4 me-xl-5">
-                            <span class="history-year">2005</span>
-                            <img src="img/content/history-02.jpg" class="mb-4 rounded" alt="...">
-                            <h3 class="h4">We Become the Leading</h3>
-                            <p class="mb-0">We’re committed to providing customers exceptional service offering employees the best training.</p>
-                        </div>
-                    </div>
-                    <div class="history-timeline">
-                        <div class="timeline-flag"></div>
-                        <div class="me-md-4 me-xl-5">
-                            <span class="history-year">2010</span>
-                            <img src="img/content/history-03.jpg" class="mb-4 rounded" alt="...">
-                            <h3 class="h4">Company is Growing</h3>
-                            <p class="mb-0">We’re committed to providing customers exceptional service offering employees the best training.</p>
-                        </div>
-                    </div>
-                    <div class="history-timeline">
-                        <div class="timeline-flag"></div>
-                        <div class="me-md-4 me-xl-5">
-                            <span class="history-year">2015</span>
-                            <img src="img/content/history-04.jpg" class="mb-4 rounded" alt="...">
-                            <h3 class="h4">Company was founded</h3>
-                            <p class="mb-0">We’re committed to providing customers exceptional service offering employees the best training.</p>
+
+                        <!-- Highlights -->
+                        <div class="highlights-list">
+                            <div class="highlight-item">
+                                <div class="highlight-icon-wrapper">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>Advanced Design Capability</h4>
+                                    <p>We leverage licensed NX CAD/CAM software along with in-house mold flow simulation, ensuring accurate.</p>
+                                </div>
+                            </div>
+
+                            <div class="highlight-item">
+                                <div class="highlight-icon-wrapper">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>High-Precision Mould</h4>
+                                    <p>From 40 tons to 450 tons IMM, we build precision molds and fixtures tailored for the automotive industry with consistent</p>
+                                </div>
+                            </div>
+
+                            <div class="highlight-item">
+                                <div class="highlight-icon-wrapper">
+                                    <i class="fas fa-magic"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>Modern Manufacturing Infrastructure</h4>
+                                    <p>Equipped with VMC, CNC, EDM, Video Measurement, and CMM facilities, our setup ensures high-accuracy machining.</p>
+                                </div>
+                            </div>
+
+                            <div class="highlight-item">
+                                <div class="highlight-icon-wrapper">
+                                    <i class="fas fa-infinity"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>Specialized Tooling Expertise</h4>
+                                    <p>We excel in Hot Runner Multi-Cavity Tools, complex lifter mechanisms, collapsible core systems, and in-situ / insert molding tools.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
 
       
-        <style>
+
+        <!-- FOOTER
+        ================================================== -->
+    <style>
       .footer-style01 {
         position: relative;
         background: url('https://www.cxhctl.com/wp-content/uploads/2024/12/images.png') center center/cover no-repeat;
@@ -646,14 +1105,15 @@
         </div>
       </div>
     </footer>
+
     </div>
 
     <!-- BUY THEME
     ================================================== -->
-  
+
     <!-- SCROLL TO TOP
     ================================================== -->
-    <div class="scroll-top-percentage"><span id="scroll-value"></span></div>
+
 
     <!-- all js include start -->
 
