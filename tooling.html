@@ -38,7 +38,7 @@
 
     <!-- PAGE LOADING
     ================================================== -->
-   
+
 
     <!-- MAIN WRAPPER
     ================================================== -->
@@ -46,7 +46,7 @@
 
         <!-- HEADER
         ================================================== -->
-     <header class="header-style1">
+      <header class="header-style1">
 
       <div class="navbar-default border-bottom border-color-light-white" style="background-color: white;">
 
@@ -89,41 +89,31 @@
                     <li>
                       <a href="#"> Infrastructure</a>
                       <ul>
-                                               
-                                                <li><a href="tooling.html">Tooling </a></li>
-                                                <li><a href="production.html">Production</a></li>
-                                                <li><a href="inspection.html">  Inspection & Training Facility</a></li>
 
-                                            </ul>
-                    </li>
-                     <li>
-                      <a href="#"> Portfolio</a>
-                      <!-- <ul>
-                                                <li><a href="#">Blog Grid</a>
-                                                    <ul>
-                                                        <li><a href="blog-grid-two-columns.html">2 Columns</a></li>
-                                                        <li><a href="blog-grid-two-columns-left-sidebar.html">2 Col – Left Sidebar</a></li>
-                                                        <li><a href="blog-grid-two-columns-right-sidebar.html">2 Col – Right Sidebar</a></li>
-                                                        <li><a href="blog-grid.html">3 Columns - Standard</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="blog-list.html">Blog List</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul> -->
+                        <li><a href="tooling.html">Tooling </a></li>
+                        <li><a href="production.html">Production</a></li>
+                        <li><a href="inspection.html"> Inspection & Training Facility</a></li>
+
+                      </ul>
                     </li>
                     <li>
-                      <a href="#"> Success Stories</a>
+                      <a href="#"> Portfolio</a>
                       <ul>
-                                                <li><a href="#"> Clients</a>
-                                                   
-                                                        <li><a href="">Awards </a></li>
-                                                      
-                                                   
-                                                </li>
-                                            </ul>
+                        <li><a href="precision-machining.html">Precision Machining</a></li>
+                        <li><a href="precision-stamping.html">Precision Stamping</a></li>
+                        
+                      </ul>
                     </li>
-                   
-                    <!-- <li><a href="">Corporate CSR</a></li> -->
+                    <li>
+                      <a href="clients.html"> Our Clients</a>
+                    
+
+
+                    </li>
+                  </ul>
+                  </li>
+
+                  <!-- <li><a href="">Corporate CSR</a></li> -->
                   </ul>
                   <!-- end menu area -->
 
@@ -156,342 +146,365 @@
 
         <style>
             .banner-section {
-            position: relative;
-            width: 100%;
-            height: 370px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .banner-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://static.vecteezy.com/system/resources/previews/025/500/704/non_2x/the-cnc-milling-machine-cutting-the-metal-part-with-the-sparking-light-the-hi-technology-mold-and-die-manufacturing-process-cnc-machine-tool-in-a-metal-factory-cutting-metal-ai-generated-free-photo.jpg') center/cover no-repeat;
-            z-index: 1;
-            filter: brightness(1.1) contrast(1.05);
-        }
-
-        /* Enhanced red overlay - more transparent to show background */
-        .banner-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, 
-                rgba(0, 0, 0, 0.336) 0%, 
-                rgba(0, 0, 0, 0.652) 30%,
-                rgba(10, 10, 10, 0.377) 100%);
-            z-index: 2;
-        }
-
-        /* Subtle pattern overlay */
-        .banner-overlay::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-         
-        }
-
-        .banner-content {
-            position: relative;
-            z-index: 3;
-            text-align: center;
-            color: #fff;
-            animation: fadeInUp 1.2s ease forwards;
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .banner-icon {
-            width: 110px;
-            height: 110px;
-            background: rgba(255, 255, 255, 0.12);
-            border: 5px solid rgba(255, 255, 255, 0.35);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(12px);
-            animation: iconFloat 4s ease-in-out infinite;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            flex-shrink: 0;
-        }
-
-        .banner-icon:hover {
-            transform: scale(1.15) rotate(180deg);
-            border-color: rgba(255, 255, 255, 0.65);
-            background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
-        }
-
-        @keyframes iconFloat {
-            0%, 100% { 
-                transform: translateY(0px) rotate(0deg); 
-            }
-            50% { 
-                transform: translateY(-10px) rotate(5deg); 
-            }
-        }
-
-        .banner-icon i {
-            font-size: 3.5rem;
-            color: #fff;
-            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
-        }
-
-        .banner-title {
-            font-size: 4rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 18px;
-            color: #fff;
-            text-shadow: 
-                0 3px 15px rgba(0, 0, 0, 0.4),
-                0 6px 30px rgba(0, 0, 0, 0.3),
-                0 1px 0 rgba(255, 255, 255, 0.1);
-            margin: 0;
-            line-height: 1;
-            position: relative;
-            padding-left: 18px;
-            font-family: 'Poppins' ;
-        }
-
-        /* Animated underline */
-        .banner-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.7);
-            animation: expandLine 1.5s ease forwards 0.5s;
-        }
-
-        @keyframes expandLine {
-            to {
-                width: 200px;
-            }
-        }
-
-        /* Decorative geometric elements */
-        .banner-decoration {
-            position: absolute;
-            z-index: 2;
-            opacity: 0.15;
-        }
-
-        .decoration-1 {
-            top: 10%;
-            left: 5%;
-            width: 80px;
-            height: 80px;
-            border: 3px solid #fff;
-            border-radius: 50%;
-            animation: rotate 20s linear infinite;
-        }
-
-        .decoration-2 {
-            bottom: 15%;
-            right: 8%;
-            width: 100px;
-            height: 100px;
-            border: 3px solid #fff;
-            transform: rotate(45deg);
-            animation: rotateReverse 25s linear infinite;
-        }
-
-        .decoration-3 {
-            top: 20%;
-            right: 15%;
-            width: 60px;
-            height: 60px;
-            border: 3px solid #fff;
-            border-radius: 50%;
-            animation: pulse 3s ease-in-out infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        @keyframes rotateReverse {
-            from { transform: rotate(45deg); }
-            to { transform: rotate(405deg); }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.15; }
-            50% { transform: scale(1.2); opacity: 0.25; }
-        }
-
-
-
-
-
-         @media (max-width: 991px) {
-            .banner-section {
-                height: 400px;
+                position: relative;
+                width: 100%;
+                height: 370px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
-            .banner-icon {
-                width: 90px;
-                height: 90px;
+            .banner-background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('https://static.vecteezy.com/system/resources/previews/025/500/704/non_2x/the-cnc-milling-machine-cutting-the-metal-part-with-the-sparking-light-the-hi-technology-mold-and-die-manufacturing-process-cnc-machine-tool-in-a-metal-factory-cutting-metal-ai-generated-free-photo.jpg') center/cover no-repeat;
+                z-index: 1;
+                filter: brightness(1.1) contrast(1.05);
             }
 
-            .banner-icon i {
-                font-size: 3rem;
+            /* Enhanced red overlay - more transparent to show background */
+            .banner-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg,
+                        rgba(0, 0, 0, 0.336) 0%,
+                        rgba(0, 0, 0, 0.652) 30%,
+                        rgba(10, 10, 10, 0.377) 100%);
+                z-index: 2;
             }
 
-            .banner-title {
-                font-size: 4.5rem;
-                letter-spacing: 12px;
-            }
+            /* Subtle pattern overlay */
+            .banner-overlay::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
 
-            .section-title {
-                font-size: 2.5rem;
-            }
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 767px) {
-            .banner-section {
-                height: 350px;
             }
 
             .banner-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .banner-icon {
-                width: 80px;
-                height: 80px;
-                border-width: 4px;
-            }
-
-            .banner-icon i {
-                font-size: 2.5rem;
-            }
-
-            .banner-title {
-                font-size: 3rem;
-                letter-spacing: 8px;
-                padding-left: 8px;
-            }
-
-            .banner-title::after {
-                width: 120px;
-            }
-
-            .decoration-1,
-            .decoration-2,
-            .decoration-3 {
-                display: none;
-            }
-
-            .content-section {
-                padding: 60px 20px;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .section-description {
-                font-size: 1rem;
-            }
-
-            .feature-card {
-                padding: 30px;
-            }
-
-            .feature-grid {
+                position: relative;
+                z-index: 3;
+                text-align: center;
+                color: #fff;
+                animation: fadeInUp 1.2s ease forwards;
+                display: flex;
+                align-items: center;
                 gap: 25px;
             }
-        }
 
-        @media (max-width: 480px) {
-            .banner-section {
-                height: 300px;
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
 
             .banner-icon {
-                width: 70px;
-                height: 70px;
+                width: 110px;
+                height: 110px;
+                background: rgba(255, 255, 255, 0.12);
+                border: 5px solid rgba(255, 255, 255, 0.35);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                backdrop-filter: blur(12px);
+                animation: iconFloat 4s ease-in-out infinite;
+                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                flex-shrink: 0;
+            }
+
+            .banner-icon:hover {
+                transform: scale(1.15) rotate(180deg);
+                border-color: rgba(255, 255, 255, 0.65);
+                background: rgba(255, 255, 255, 0.2);
+                box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+            }
+
+            @keyframes iconFloat {
+
+                0%,
+                100% {
+                    transform: translateY(0px) rotate(0deg);
+                }
+
+                50% {
+                    transform: translateY(-10px) rotate(5deg);
+                }
             }
 
             .banner-icon i {
-                font-size: 2rem;
+                font-size: 3.5rem;
+                color: #fff;
+                filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
             }
 
             .banner-title {
-                font-size: 2.2rem;
-                letter-spacing: 6px;
+                font-size: 4rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 18px;
+                color: #fff;
+                text-shadow:
+                    0 3px 15px rgba(0, 0, 0, 0.4),
+                    0 6px 30px rgba(0, 0, 0, 0.3),
+                    0 1px 0 rgba(255, 255, 255, 0.1);
+                margin: 0;
+                line-height: 1;
+                position: relative;
+                padding-left: 18px;
+                font-family: 'Poppins';
             }
 
+            /* Animated underline */
             .banner-title::after {
-                width: 80px;
-                height: 3px;
+                content: '';
+                position: absolute;
+                bottom: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 4px;
+                background: rgba(255, 255, 255, 0.7);
+                animation: expandLine 1.5s ease forwards 0.5s;
             }
-        }
+
+            @keyframes expandLine {
+                to {
+                    width: 200px;
+                }
+            }
+
+            /* Decorative geometric elements */
+            .banner-decoration {
+                position: absolute;
+                z-index: 2;
+                opacity: 0.15;
+            }
+
+            .decoration-1 {
+                top: 10%;
+                left: 5%;
+                width: 80px;
+                height: 80px;
+                border: 3px solid #fff;
+                border-radius: 50%;
+                animation: rotate 20s linear infinite;
+            }
+
+            .decoration-2 {
+                bottom: 15%;
+                right: 8%;
+                width: 100px;
+                height: 100px;
+                border: 3px solid #fff;
+                transform: rotate(45deg);
+                animation: rotateReverse 25s linear infinite;
+            }
+
+            .decoration-3 {
+                top: 20%;
+                right: 15%;
+                width: 60px;
+                height: 60px;
+                border: 3px solid #fff;
+                border-radius: 50%;
+                animation: pulse 3s ease-in-out infinite;
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes rotateReverse {
+                from {
+                    transform: rotate(45deg);
+                }
+
+                to {
+                    transform: rotate(405deg);
+                }
+            }
+
+            @keyframes pulse {
+
+                0%,
+                100% {
+                    transform: scale(1);
+                    opacity: 0.15;
+                }
+
+                50% {
+                    transform: scale(1.2);
+                    opacity: 0.25;
+                }
+            }
+
+
+
+
+
+            @media (max-width: 991px) {
+                .banner-section {
+                    height: 400px;
+                }
+
+                .banner-icon {
+                    width: 90px;
+                    height: 90px;
+                }
+
+                .banner-icon i {
+                    font-size: 3rem;
+                }
+
+                .banner-title {
+                    font-size: 4.5rem;
+                    letter-spacing: 12px;
+                }
+
+                .section-title {
+                    font-size: 2.5rem;
+                }
+            }
+
+            /* Mobile Responsive */
+            @media (max-width: 767px) {
+                .banner-section {
+                    height: 350px;
+                }
+
+                .banner-content {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                .banner-icon {
+                    width: 80px;
+                    height: 80px;
+                    border-width: 4px;
+                }
+
+                .banner-icon i {
+                    font-size: 2.5rem;
+                }
+
+                .banner-title {
+                    font-size: 3rem;
+                    letter-spacing: 8px;
+                    padding-left: 8px;
+                }
+
+                .banner-title::after {
+                    width: 120px;
+                }
+
+                .decoration-1,
+                .decoration-2,
+                .decoration-3 {
+                    display: none;
+                }
+
+                .content-section {
+                    padding: 60px 20px;
+                }
+
+                .section-title {
+                    font-size: 2rem;
+                }
+
+                .section-description {
+                    font-size: 1rem;
+                }
+
+                .feature-card {
+                    padding: 30px;
+                }
+
+                .feature-grid {
+                    gap: 25px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .banner-section {
+                    height: 300px;
+                }
+
+                .banner-icon {
+                    width: 70px;
+                    height: 70px;
+                }
+
+                .banner-icon i {
+                    font-size: 2rem;
+                }
+
+                .banner-title {
+                    font-size: 2.2rem;
+                    letter-spacing: 6px;
+                }
+
+                .banner-title::after {
+                    width: 80px;
+                    height: 3px;
+                }
+            }
         </style>
 
- <!-- Banner Section -->
-    <section class="banner-section">
-        <div class="banner-background"></div>
-        <div class="banner-overlay"></div>
-        
-        <!-- Decorative elements -->
-      
-        
-        <div class="banner-content">
-            <div class="banner-icon">
-                <i class="fas fa-cog"></i>
+        <!-- Banner Section -->
+        <section class="banner-section">
+            <div class="banner-background"></div>
+            <div class="banner-overlay"></div>
+
+            <!-- Decorative elements -->
+
+
+            <div class="banner-content">
+                <div class="banner-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <h1 class="banner-title">TOOLING</h1>
             </div>
-            <h1 class="banner-title">TOOLING</h1>
-        </div>
-    </section>
-        
+        </section>
 
 
 
-         <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-      
-        body {
-            font-family: 'Poppins', sans-serif !important;
-            min-height: 100vh;
-           
-            overflow-x: hidden;
-        }
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-        /* Animated background */
-        /* body::before {
+
+            body {
+                font-family: 'Poppins', sans-serif !important;
+                min-height: 100vh;
+
+                overflow-x: hidden;
+            }
+
+            /* Animated background */
+            /* body::before {
             content: '';
             position: fixed;
             top: 0;
@@ -506,134 +519,152 @@
             z-index: -1;
         } */
 
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(30px, -30px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-        }
+            @keyframes float {
 
-        .split-section {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            border-radius: 30px;
-            overflow: hidden;
-            max-width: 1400px;
-            margin: 0 auto;
-            box-shadow: 
-                0 20px 60px rgba(0, 0, 0, 0.08),
-                inset 0 1px 0 rgba(255, 255, 255, 1);
-        }
+                0%,
+                100% {
+                    transform: translate(0, 0) scale(1);
+                }
 
-        .image-side {
-            position: relative;
-            height: 100%;
-            min-height: 700px;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            background: linear-gradient(135deg, #9081e53f 0%, #e6e3ed88 50%, #ffffff 100%);
-        }
+                33% {
+                    transform: translate(30px, -30px) scale(1.1);
+                }
 
-        .image-side::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(241, 239, 239, 0.3) 0%, transparent 70%);
-            animation: pulse 8s ease-in-out infinite;
-        }
+                66% {
+                    transform: translate(-20px, 20px) scale(0.9);
+                }
+            }
 
-        @keyframes pulse {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(-20px, -20px) scale(1.1); }
-        }
+            .split-section {
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, 0.8);
+                border-radius: 30px;
+                overflow: hidden;
+                max-width: 1400px;
+                margin: 0 auto;
+                box-shadow:
+                    0 20px 60px rgba(0, 0, 0, 0.08),
+                    inset 0 1px 0 rgba(255, 255, 255, 1);
+            }
 
-        .image-wrapper {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            transform: perspective(1000px) rotateY(0deg);
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            border: 3px solid rgba(255, 255, 255, 0.8);
-        }
+            .image-side {
+                position: relative;
+                height: 100%;
+                min-height: 700px;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                background: linear-gradient(135deg, #9081e53f 0%, #e6e3ed88 50%, #ffffff 100%);
+            }
 
-        .image-wrapper:hover {
-            transform: perspective(1000px) rotateY(-5deg) translateY(-10px);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
-        }
+            .image-side::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                right: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(241, 239, 239, 0.3) 0%, transparent 70%);
+                animation: pulse 8s ease-in-out infinite;
+            }
 
-        .image-wrapper::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(168, 237, 234, 0.3) 0%, rgba(254, 214, 227, 0.3) 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
+            @keyframes pulse {
 
-        .image-wrapper:hover::after {
-            opacity: 1;
-        }
+                0%,
+                100% {
+                    transform: translate(0, 0) scale(1);
+                }
 
-        .image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-        }
+                50% {
+                    transform: translate(-20px, -20px) scale(1.1);
+                }
+            }
 
-        .image-wrapper:hover img {
-            transform: scale(1.1);
-        }
+            .image-wrapper {
+                flex: 1;
+                position: relative;
+                overflow: hidden;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+                transform: perspective(1000px) rotateY(0deg);
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+                border: 3px solid rgba(255, 255, 255, 0.8);
+            }
 
-        .content-side {
-            padding: 40px 60px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-        }
+            .image-wrapper:hover {
+                transform: perspective(1000px) rotateY(-5deg) translateY(-10px);
+                box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+            }
 
-        .info-block {
-            margin-bottom: 50px;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
+            .image-wrapper::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, rgba(168, 237, 234, 0.3) 0%, rgba(254, 214, 227, 0.3) 100%);
                 opacity: 0;
-                transform: translateY(30px);
+                transition: opacity 0.4s ease;
             }
-            to {
+
+            .image-wrapper:hover::after {
                 opacity: 1;
-                transform: translateY(0);
             }
-        }
 
-        .info-block .badge {
-            display: inline-block;
-            padding: 8px 20px;
-            background: linear-gradient(135deg, #ff9a9e, #fecfef);
-            color: #fff;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
-        }
+            .image-wrapper img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            }
 
-        /* .info-block h2 {
+            .image-wrapper:hover img {
+                transform: scale(1.1);
+            }
+
+            .content-side {
+                padding: 40px 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+            }
+
+            .info-block {
+                margin-bottom: 50px;
+                animation: fadeInUp 0.8s ease forwards;
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .info-block .badge {
+                display: inline-block;
+                padding: 8px 20px;
+                background: linear-gradient(135deg, #ff9a9e, #fecfef);
+                color: #fff;
+                border-radius: 50px;
+                font-size: 0.85rem;
+                font-weight: 600;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
+            }
+
+            /* .info-block h2 {
             font-size: 3rem;
             font-weight: 700;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
@@ -644,332 +675,346 @@
             line-height: 1.2;
         } */
 
-        .info-block p {
-            font-size: 1.15rem;
-            color: #5a5a5a;
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        .highlights-list {
-            display: grid;
-            gap: 20px;
-        }
-
-        .highlight-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 28px;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.9);
-            border-radius: 18px;
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease forwards;
-            animation-delay: calc(var(--index) * 0.1s);
-            opacity: 0;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-        }
-
-        .highlight-item:nth-child(1) { --index: 1; }
-        .highlight-item:nth-child(2) { --index: 2; }
-        .highlight-item:nth-child(3) { --index: 3; }
-        .highlight-item:nth-child(4) { --index: 4; }
-
-        .highlight-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .highlight-item:hover::before {
-            left: 100%;
-        }
-
-        .highlight-item:hover {
-            background: rgba(255, 255, 255, 0.95);
-            border-color: rgba(168, 237, 234, 0.8);
-            transform: translateX(10px) scale(1.02);
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 1);
-        }
-
-        .highlight-icon-wrapper {
-            flex-shrink: 0;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 
-                0 8px 20px rgba(168, 237, 234, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            position: relative;
-            transition: all 0.4s ease;
-        }
-
-        .highlight-icon-wrapper::after {
-            content: '';
-            position: absolute;
-            inset: -3px;
-            border-radius: 18px;
-            background: linear-gradient(135deg, #a8edea, #fed6e3);
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .highlight-item:hover .highlight-icon-wrapper {
-            transform: rotateY(360deg) scale(1.1);
-        }
-
-        .highlight-item:hover .highlight-icon-wrapper::after {
-            opacity: 0.5;
-            filter: blur(10px);
-        }
-
-        .highlight-icon-wrapper i {
-            font-size: 1.5rem;
-            color: #667eea;
-            transition: transform 0.4s ease;
-        }
-
-        .highlight-item:hover .highlight-icon-wrapper i {
-            transform: scale(1.2);
-        }
-
-        .highlight-content h4 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 10px;
-        }
-
-        .highlight-content p {
-            font-size: 1rem;
-            color: #718096;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* Decorative elements */
-        .decorative-circle {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 183, 197, 0.2) 0%, transparent 70%);
-            pointer-events: none;
-            animation: float 15s ease-in-out infinite;
-        }
-
-        .circle-1 {
-            top: -100px;
-            right: -100px;
-        }
-
-        .circle-2 {
-            bottom: -150px;
-            left: -150px;
-            animation-delay: 5s;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 991px) {
-            .image-side {
-                min-height: 500px;
-                padding: 30px;
-            }
-
-            .content-side {
-                padding: 50px 35px;
-            }
-
-            .info-block h2 {
-                font-size: 2.2rem;
-            }
-
             .info-block p {
-                font-size: 1.05rem;
-            }
-        }
-
-        @media (max-width: 767px) {
-           
-
-            .split-section {
-                border-radius: 20px;
+                font-size: 1.15rem;
+                color: #5a5a5a;
+                line-height: 1.8;
+                margin: 0;
             }
 
-            .image-side {
-                min-height: 400px;
-                padding: 20px;
+            .highlights-list {
+                display: grid;
                 gap: 20px;
             }
 
-            .content-side {
-                padding: 40px 25px;
-            }
-
-            .info-block {
-                margin-bottom: 35px;
-            }
-
-            .info-block h2 {
-                font-size: 1.9rem;
-            }
-
-            .info-block p {
-                font-size: 1rem;
-            }
-
             .highlight-item {
-                padding: 22px;
-                gap: 16px;
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 28px;
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(10px);
+                border: 2px solid rgba(255, 255, 255, 0.9);
+                border-radius: 18px;
+                transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                position: relative;
+                overflow: hidden;
+                animation: fadeInUp 0.8s ease forwards;
+                animation-delay: calc(var(--index) * 0.1s);
+                opacity: 0;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            }
+
+            .highlight-item:nth-child(1) {
+                --index: 1;
+            }
+
+            .highlight-item:nth-child(2) {
+                --index: 2;
+            }
+
+            .highlight-item:nth-child(3) {
+                --index: 3;
+            }
+
+            .highlight-item:nth-child(4) {
+                --index: 4;
+            }
+
+            .highlight-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+                transition: left 0.5s ease;
+            }
+
+            .highlight-item:hover::before {
+                left: 100%;
+            }
+
+            .highlight-item:hover {
+                background: rgba(255, 255, 255, 0.95);
+                border-color: rgba(168, 237, 234, 0.8);
+                transform: translateX(10px) scale(1.02);
+                box-shadow:
+                    0 20px 40px rgba(0, 0, 0, 0.1),
+                    inset 0 1px 0 rgba(255, 255, 255, 1);
             }
 
             .highlight-icon-wrapper {
-                width: 50px;
-                height: 50px;
+                flex-shrink: 0;
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+                border-radius: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow:
+                    0 8px 20px rgba(168, 237, 234, 0.4),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+                position: relative;
+                transition: all 0.4s ease;
+            }
+
+            .highlight-icon-wrapper::after {
+                content: '';
+                position: absolute;
+                inset: -3px;
+                border-radius: 18px;
+                background: linear-gradient(135deg, #a8edea, #fed6e3);
+                z-index: -1;
+                opacity: 0;
+                transition: opacity 0.4s ease;
+            }
+
+            .highlight-item:hover .highlight-icon-wrapper {
+                transform: rotateY(360deg) scale(1.1);
+            }
+
+            .highlight-item:hover .highlight-icon-wrapper::after {
+                opacity: 0.5;
+                filter: blur(10px);
+            }
+
+            .highlight-icon-wrapper i {
+                font-size: 1.5rem;
+                color: #667eea;
+                transition: transform 0.4s ease;
+            }
+
+            .highlight-item:hover .highlight-icon-wrapper i {
+                transform: scale(1.2);
             }
 
             .highlight-content h4 {
-                font-size: 1.1rem;
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: #2d3748;
+                margin-bottom: 10px;
             }
 
             .highlight-content p {
-                font-size: 0.95rem;
+                font-size: 1rem;
+                color: #718096;
+                line-height: 1.6;
+                margin: 0;
             }
 
+            /* Decorative elements */
             .decorative-circle {
-                width: 200px;
-                height: 200px;
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(255, 183, 197, 0.2) 0%, transparent 70%);
+                pointer-events: none;
+                animation: float 15s ease-in-out infinite;
             }
-        }
-    </style>
+
+            .circle-1 {
+                top: -100px;
+                right: -100px;
+            }
+
+            .circle-2 {
+                bottom: -150px;
+                left: -150px;
+                animation-delay: 5s;
+            }
+
+            /* Mobile Responsive */
+            @media (max-width: 991px) {
+                .image-side {
+                    min-height: 500px;
+                    padding: 30px;
+                }
+
+                .content-side {
+                    padding: 50px 35px;
+                }
+
+                .info-block h2 {
+                    font-size: 2.2rem;
+                }
+
+                .info-block p {
+                    font-size: 1.05rem;
+                }
+            }
+
+            @media (max-width: 767px) {
 
 
-  <div class="container-fluid px-3 px-lg-4" style="padding: 50px 0px;">
-        <div class="split-section">
-            <div class="row g-0">
-                <!-- Left Side: Images -->
-                <div class="col-lg-5">
-                    <div class="image-side">
-                        <div class="image-wrapper">
-                            <img src="https://leadrp.net/wp-content/uploads/2022/02/CNC-Machining-1200x628-15.jpg" alt="Creative workspace">
-                        </div>
-                        <div class="image-wrapper">
-                            <img src="https://leadrp.net/wp-content/uploads/2022/03/common-types-of-CNC-machine-900x600.jpg" alt="Innovative team">
+                .split-section {
+                    border-radius: 20px;
+                }
+
+                .image-side {
+                    min-height: 400px;
+                    padding: 20px;
+                    gap: 20px;
+                }
+
+                .content-side {
+                    padding: 40px 25px;
+                }
+
+                .info-block {
+                    margin-bottom: 35px;
+                }
+
+                .info-block h2 {
+                    font-size: 1.9rem;
+                }
+
+                .info-block p {
+                    font-size: 1rem;
+                }
+
+                .highlight-item {
+                    padding: 22px;
+                    gap: 16px;
+                }
+
+                .highlight-icon-wrapper {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .highlight-content h4 {
+                    font-size: 1.1rem;
+                }
+
+                .highlight-content p {
+                    font-size: 0.95rem;
+                }
+
+                .decorative-circle {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        </style>
+
+
+        <div class="container-fluid px-3 px-lg-4" style="padding: 50px 0px;">
+            <div class="split-section">
+                <div class="row g-0">
+                    <!-- Left Side: Images -->
+                    <div class="col-lg-5">
+                        <div class="image-side">
+                            <div class="image-wrapper">
+                                <img src="https://elimold.com/wp-content/uploads/2023/06/wedm-machining-service.webp"
+                                    alt="Creative workspace">
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="https://dienamics.com.au/wp-content/uploads/2018/05/How-Does-Wire-Cutting-Work.jpg"
+                                    alt="Innovative team">
+                            </div>
                         </div>
                     </div>
-                </div>
-<style>
-     .title-highlight {
-      color: linear-gradient(135deg, #526ad4, #815ba6, #f093fb) !important ;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+                    <style>
+                        .title-highlight {
+                            color: linear-gradient(135deg, #526ad4, #815ba6, #f093fb) !important;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                        }
 
-    .section-title {
-      font-size: 2.4rem ;
-      font-weight: 800;
-      color: #1e293b !important;
-      margin-bottom: 15px;
-      position: relative;
-      z-index: 1;
-      line-height: 1.2 !important;
-    }
+                        .section-title {
+                            font-size: 2.4rem;
+                            font-weight: 800;
+                            color: #1e293b !important;
+                            margin-bottom: 15px;
+                            position: relative;
+                            z-index: 1;
+                            line-height: 1.2 !important;
+                        }
 
-    @media (max-width: 1200px) {
+                        @media (max-width: 1200px) {
 
-      .section-title {
-        font-size: 2.5rem;
-      }
-    }
+                            .section-title {
+                                font-size: 2.5rem;
+                            }
+                        }
 
-    @media (max-width: 968px) {
-
-
-      .section-title {
-        font-size: 2.2rem;
-      }
-
-    }
-
-    @media (max-width: 640px) {
+                        @media (max-width: 968px) {
 
 
-      .section-title {
-        font-size: 1.8rem;
-      }
+                            .section-title {
+                                font-size: 2.2rem;
+                            }
+
+                        }
+
+                        @media (max-width: 640px) {
 
 
-    }
-</style>
-                <!-- Right Side: Content -->
-                <div class="col-lg-7">
-                    <div class="content-side">
-                        <div class="decorative-circle circle-1"></div>
-                        <div class="decorative-circle circle-2"></div>
+                            .section-title {
+                                font-size: 1.8rem;
+                            }
 
-                        <!-- Info Block -->
-                        <div class="info-block">
-                            <!-- <span class="badge">Why Choose Us</span> -->
-                            <h2 class="section-title">  Advanced Tooling Capabilities <span class=" title-highlight">at Star Industriels</span></h2>
-                            <p>At Star Industriels, we pride ourselves on our state-of-the-art in-house tooling capabilities, driven by a dedicated team of over 25 skilled professionals. Under the visionary leadership of our CEO, MR. BALCHANDRA CHOUGULE, we leverage advanced VMC, CNC EDM, and conventional machining technologies to deliver precision automotive tools and fixtures that meet the highest international standards.</p>
-                        </div>
 
-                        <!-- Highlights -->
-                        <div class="highlights-list">
-                            <div class="highlight-item">
-                                <div class="highlight-icon-wrapper">
-                                    <i class="fas fa-rocket"></i>
-                                </div>
-                                <div class="highlight-content">
-                                    <h4>Advanced Design Capability</h4>
-                                    <p>We leverage licensed NX CAD/CAM software along with in-house mold flow simulation, ensuring accurate.</p>
-                                </div>
+                        }
+                    </style>
+                    <!-- Right Side: Content -->
+                    <div class="col-lg-7">
+                        <div class="content-side">
+                            <div class="decorative-circle circle-1"></div>
+                            <div class="decorative-circle circle-2"></div>
+
+                            <!-- Info Block -->
+                            <div class="info-block">
+                                <!-- <span class="badge">Why Choose Us</span> -->
+                                <h2 class="section-title"> Advanced Tooling Capabilities <span
+                                        class=" title-highlight">at Star Industriels</span></h2>
+                                <p>At Star Industriels, we pride ourselves on our state-of-the-art in-house tooling
+                                    capabilities, driven by a dedicated team of over 25 skilled professionals. Under the
+                                    visionary leadership of our CEO, MR. BALCHANDRA CHOUGULE, we leverage advanced VMC,
+                                    Wire Cut, EDM, and conventional machining technologies to deliver precision automotive
+                                    tools and fixtures that meet the highest international standards.</p>
                             </div>
 
-                            <div class="highlight-item">
-                                <div class="highlight-icon-wrapper">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-                                <div class="highlight-content">
-                                    <h4>High-Precision Mould</h4>
-                                    <p>From 40 tons to 450 tons IMM, we build precision molds and fixtures tailored for the automotive industry with consistent</p>
-                                </div>
-                            </div>
+                            <!-- Highlights -->
+                            <div class="highlights-list">
+                               
 
-                            <div class="highlight-item">
-                                <div class="highlight-icon-wrapper">
-                                    <i class="fas fa-magic"></i>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon-wrapper">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="highlight-content">
+                                        <h4>High-Precision Tool</h4>
+                                        <p>From 10 tons to 150 tons , we build precision tool and fixtures tailored
+                                            for the automotive industry with consistent</p>
+                                    </div>
                                 </div>
-                                <div class="highlight-content">
-                                    <h4>Modern Manufacturing Infrastructure</h4>
-                                    <p>Equipped with VMC, CNC, EDM, Video Measurement, and CMM facilities, our setup ensures high-accuracy machining.</p>
-                                </div>
-                            </div>
 
-                            <div class="highlight-item">
-                                <div class="highlight-icon-wrapper">
-                                    <i class="fas fa-infinity"></i>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon-wrapper">
+                                        <i class="fas fa-magic"></i>
+                                    </div>
+                                    <div class="highlight-content">
+                                        <h4>Modern Manufacturing Infrastructure</h4>
+                                        <p>Equipped with VMC, CNC, Wire Cut, EDM, Video Measurement, and CMM facilities, our setup
+                                            ensures high-accuracy machining.</p>
+                                    </div>
                                 </div>
-                                <div class="highlight-content">
-                                    <h4>Specialized Tooling Expertise</h4>
-                                    <p>We excel in Hot Runner Multi-Cavity Tools, complex lifter mechanisms, collapsible core systems, and in-situ / insert molding tools.</p>
+
+                                <div class="highlight-item">
+                                    <div class="highlight-icon-wrapper">
+                                        <i class="fas fa-infinity"></i>
+                                    </div>
+                                    <div class="highlight-content">
+                                        <h4>High-Accuracy Wire Cut Machining
+</h4>
+                                        <p>Our advanced Wire Cut machines deliver ultra-precise profiles and complex geometries with smooth finishes, ensuring every tool meets tight tolerances required by modern automotive.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -977,134 +1022,140 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
 
-      
+
+
 
         <!-- FOOTER
         ================================================== -->
-    <style>
-      .footer-style01 {
-        position: relative;
-        background: url('https://www.cxhctl.com/wp-content/uploads/2024/12/images.png') center center/cover no-repeat;
-        color: #fff;
-        overflow: hidden;
-        padding: 40px 0px;
-      }
+        <style>
+            .footer-style01 {
+                position: relative;
+                background: url('https://www.cxhctl.com/wp-content/uploads/2024/12/images.png') center center/cover no-repeat;
+                color: #fff;
+                overflow: hidden;
+                padding: 40px 0px;
+            }
 
-      .footer-style01 .footer-overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.611);
-        /* light overlay */
-        backdrop-filter: brightness(0.7);
-        z-index: 1;
-      }
+            .footer-style01 .footer-overlay {
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.611);
+                /* light overlay */
+                backdrop-filter: brightness(0.7);
+                z-index: 1;
+            }
 
-      .footer-style01 .container {
-        position: relative;
-        z-index: 2;
-      }
+            .footer-style01 .container {
+                position: relative;
+                z-index: 2;
+            }
 
-      /* link colors */
-      .footer-style01 a {
-        color: #f1f1f1;
-        transition: color 0.3s ease;
-      }
+            /* link colors */
+            .footer-style01 a {
+                color: #f1f1f1;
+                transition: color 0.3s ease;
+            }
 
-      .footer-style01 a:hover {
-        color: #ffcc00;
-      }
+            .footer-style01 a:hover {
+                color: #ffcc00;
+            }
 
-      /* make text readable */
-      .footer-style01 p,
-      .footer-style01 h3 {
-        color: #fff;
-        z-index: 2;
-        position: relative;
-      }
+            /* make text readable */
+            .footer-style01 p,
+            .footer-style01 h3 {
+                color: #fff;
+                z-index: 2;
+                position: relative;
+            }
 
-      /* responsive tweak */
-      @media (max-width: 768px) {
-        .footer-style01 {
-          text-align: center;
-        }
-      }
-    </style>
+            /* responsive tweak */
+            @media (max-width: 768px) {
+                .footer-style01 {
+                    text-align: center;
+                }
+            }
+        </style>
 
-    <!-- FOOTER
+        <!-- FOOTER
         ================================================== -->
-    <footer class="footer-style01 pt-10 pb-8">
-      <div class="footer-overlay"></div> <!-- overlay layer -->
-      <div class="container position-relative">
-     <div class="row mb-6">
-  <div class="col-md-3">
-    <div class="pe-md-1-6 pe-xxl-7">
-      <h3 class="text-white h4 mb-2-4 mt-2-4">About Us</h3>
-      <p class="text-white mb-0 opacity8">
-        Star Industries, established in 2014 in Chakan, Pune, is a trusted manufacturer of precision sheet metal
-        press components and machined components. We specialize in producing high-quality parts for ferrous 
-      </p>
-    </div>
-  </div>
+        <footer class="footer-style01 pt-10 pb-8">
+            <div class="footer-overlay"></div> <!-- overlay layer -->
+            <div class="container position-relative">
+                <div class="row mb-6">
+                    <div class="col-md-3">
+                        <div class="pe-md-1-6 pe-xxl-7">
+                            <h3 class="text-white h4 mb-2-4 mt-2-4">About Us</h3>
+                            <p class="text-white mb-0 opacity8">
+                                Star Industries, established in 2014 in Chakan, Pune, is a trusted manufacturer of
+                                precision sheet metal
+                                press components and machined components. We specialize in producing high-quality parts
+                                for ferrous
+                            </p>
+                        </div>
+                    </div>
 
-  <div class="col-md-3">
-    <div class="ps-md-2-6 ps-xl-7">
-      <h3 class="text-white h4 mb-2-4 mt-2-4">Products</h3>
-      <ul class="links-wrap list-unstyled mb-0">
-        <li><a href="">Sheet Metal Press</a></li>
-        <li><a href="">Stainless Steel</a></li>
-        <li><a href="">Cold Rolled Close Annealed</a></li>
-        <li><a href="">Stainless steel</a></li>
-         <li><a href="">Cold Rolled Close </a></li>
-      </ul>
-    </div>
-  </div>
+                    <div class="col-md-3">
+                        <div class="ps-md-2-6 ps-xl-7">
+                            <h3 class="text-white h4 mb-2-4 mt-2-4">Products</h3>
+                            <ul class="links-wrap list-unstyled mb-0">
+                                <li><a href="">Sheet Metal Press</a></li>
+                                <li><a href="">Stainless Steel</a></li>
+                                <li><a href="">Cold Rolled Close Annealed</a></li>
+                                <li><a href="">Stainless steel</a></li>
+                                <li><a href="">Cold Rolled Close </a></li>
+                            </ul>
+                        </div>
+                    </div>
 
-<div class="col-md-3">
-  <div class="ps-md-2-6 ">
-    <h3 class="text-white h4 mb-2-4 mt-2-4">Contact Us</h3>
-    <ul class="links-wrap list-unstyled mb-0">
-      <li><a href="#"><i class="fas fa-map-marker-alt me-2"></i>Star Industries, Plot No 54, WMDC, BH BSNL Tower, Ambethan Road, Chakan. Pune-410 501</a></li>
-      <li><a href="mailto:starindustriesc@gmail.com"><i class="fas fa-envelope me-2"></i>starindustriesc@gmail.com</a></li>
-      <li><a href="tel:+919960694337"><i class="fas fa-phone-alt me-2"></i>+91 99606 94337</a></li>
-    </ul>
-  </div>
-</div>
+                    <div class="col-md-3">
+                        <div class="ps-md-2-6 ">
+                            <h3 class="text-white h4 mb-2-4 mt-2-4">Contact Us</h3>
+                            <ul class="links-wrap list-unstyled mb-0">
+                                <li><a href="#"><i class="fas fa-map-marker-alt me-2"></i>Star Industries, Plot No 54,
+                                        WMDC, BH BSNL Tower, Ambethan Road, Chakan. Pune-410 501</a></li>
+                                <li><a href="mailto:starindustriesc@gmail.com"><i
+                                            class="fas fa-envelope me-2"></i>starindustriesc@gmail.com</a></li>
+                                <li><a href="tel:+919960694337"><i class="fas fa-phone-alt me-2"></i>+91 99606 94337</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
 
-  <div class="col-md-3">
-    <div class="ps-lg-5">
-      <h3 class="text-white h4 mb-2-4 mt-2-4">Review Us</h3>
-      <a href="">
-        <img src="https://cdn.prod.website-files.com/62b1b17308b0d74291186304/63ca9fbadaacd2153b8045ca_Click-here-teo-leave-us-a-review-on-Google-min.png" alt="">
-      </a>
-    </div>
-  </div>
-</div>
+                    <div class="col-md-3">
+                        <div class="ps-lg-5">
+                            <h3 class="text-white h4 mb-2-4 mt-2-4">Review Us</h3>
+                            <a href="">
+                                <img src="https://cdn.prod.website-files.com/62b1b17308b0d74291186304/63ca9fbadaacd2153b8045ca_Click-here-teo-leave-us-a-review-on-Google-min.png"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-      </div>
-
-      <div class="container position-relative">
-        <div class="row mt-n4 align-items-center">
-          <div class="col-lg-12 mt-4" style="display: flex; align-items: center; justify-content: center;">
-            <div class="text-center text-lg-start">
-              <p class="d-inline-block text-white mb-0">
-                &copy;  All Rights Reserved | Designed & Developed By
-                <a href="https://netcom-india.com/" class="text-primary text-white-hover" style="color: #fff !important;">Netcom Business
-                  Solutions Pvt Ltd</a>
-              </p>
             </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+
+            <div class="container position-relative">
+                <div class="row mt-n4 align-items-center">
+                    <div class="col-lg-12 mt-4" style="display: flex; align-items: center; justify-content: center;">
+                        <div class="text-center text-lg-start">
+                            <p class="d-inline-block text-white mb-0">
+                                &copy; All Rights Reserved | Designed & Developed By
+                                <a href="https://netcom-india.com/" class="text-primary text-white-hover"
+                                    style="color: #fff !important;">Netcom Business
+                                    Solutions Pvt Ltd</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </div>
 

@@ -101,7 +101,7 @@ a:active {
 
 .text-primary,
 .text-primary-hover:hover {
-    color: #FC5220 !important
+    color: #0B203B !important
 }
 
 .bg-primary {
@@ -1139,13 +1139,15 @@ a:active {
 }
 
 .card-style01 .card-body h3 a {
-    padding: 20px 15px;
-    color: #121c22;
-    display: block
+    padding: 16px 15px;
+    color: #ffffff;
+    display: block;
+     background-color: #033f5f;
+     border-radius: 5px;
 }
 
 .card-style01:hover .card-body h3 a {
-    color: #fff
+    color: #fff;
 }
 
 .card-style02 .card-body ul li {
@@ -1957,10 +1959,10 @@ a:active {
     background-color: #FC5220
 }
 
-.owl-carousel .owl-item img {
+/* .owl-carousel .owl-item img {
     width: auto;
     display: inline-block
-}
+} */
 
 .owl-thumbs {
     z-index: 9;
@@ -2714,42 +2716,48 @@ h2.resp-accordion.resp-tab-active {
     color: #fff;
     background: #121c22
 }
+/* Sticky Sidebar */
+.sticky-sidebar {
+    position: sticky;
+    top: 100px;
+}
 
+/* Category Links */
 .service-sidebar .cetegory li {
-    margin-bottom: 12px
+    margin-bottom: 12px;
 }
 
 .service-sidebar .cetegory li a {
     background-color: #fff;
     padding: 15px 20px 15px 30px;
     border-radius: 0.375rem;
-    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
 }
 
 .service-sidebar .cetegory li:hover a,
 .service-sidebar .cetegory li.active a {
-    background-color: #121c22;
-    color: #fff
+    background-color: #033F5F;
+    color: #fff;
 }
 
+/* Brochure */
 .service-sidebar .widget-brochure {
     margin-bottom: 0;
     padding: 0;
-    list-style: none
+    list-style: none;
 }
 
 .service-sidebar .widget-brochure li {
     margin-bottom: 12px;
     border: 1px solid #ededed;
     border-radius: 0.375rem;
-    background: #fff
+    background: #fff;
 }
 
 .service-sidebar .widget-brochure li:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .service-sidebar .widget-brochure li a {
@@ -2758,7 +2766,7 @@ h2.resp-accordion.resp-tab-active {
     padding: 16px 15px 16px 75px;
     font-size: 15px;
     font-weight: 600;
-    letter-spacing: 1px
+    letter-spacing: 1px;
 }
 
 .service-sidebar .widget-brochure li a i {
@@ -2775,9 +2783,10 @@ h2.resp-accordion.resp-tab-active {
     border-bottom-left-radius: 0.375rem;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
+/* Icon Box */
 .service-sidebar .banner-wrapper .icon-boxs {
     position: absolute;
     top: -43px;
@@ -2790,7 +2799,7 @@ h2.resp-accordion.resp-tab-active {
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 .team-details-social {
@@ -3291,7 +3300,7 @@ h2.resp-accordion.resp-tab-active {
 }
 
 .timeline-flag {
-    background: #FC5220;
+    background: #1668A8;
     width: 10px;
     height: 25px;
     margin-bottom: 25px;
@@ -3313,7 +3322,7 @@ h2.resp-accordion.resp-tab-active {
 
 .history-year {
     position: absolute;
-    background-color: #FC5220;
+    background-color: #1668A8;
     color: #fff;
     padding: 4px 20px;
     left: 50%;

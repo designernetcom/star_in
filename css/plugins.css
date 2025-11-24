@@ -50302,7 +50302,7 @@ header {
     }
 
     .header-style1 .navbar-nav>li.has-sub>a:hover {
-        color: #fff
+        color: black
     }
 
     .header-style1 .navbar>ul>li.has-sub>a:hover:after {
