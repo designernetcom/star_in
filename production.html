@@ -978,143 +978,148 @@ With modern automated processes and strict quality control, we ensure every comp
 
 
 <section class="production-certificates-section">
-  <div class="production-certificates">
+  <div class="slider-wrapper">
 
-    <!-- First Row (3 Portrait Images) -->
-    <!-- <div class="people-certificate people-portrait">
-      <img src="img/grp-3.jpeg" alt="Certificate 1">
-    </div>
+    <button class="slider-btn prev" id="prevBtn">&#10094;</button>
 
-    <div class="people-certificate people-portrait">
-      <img src="img/certificate-2.jpeg" alt="Certificate 2">
-    </div>
-
-    <div class="people-certificate people-portrait">
-      <img src="img/certificate-5.jpeg" alt="Certificate 3">
-    </div> -->
-
-    <!-- Second Row (2 Landscape Images Centered) -->
-    <div class="production-row-two">
-      <div class="production-certificate production-landscape">
-        <img src="img/shop-1.jpeg" alt="Certificate 4">
-      </div>
-
-      <div class="production-certificate production-landscape">
-        <img src="img/shop-2.jpeg" alt="Certificate 5">
-      </div>
-
-      <div class="production-certificate production-landscape">
-        <img src="img/firewall.jpeg" alt="Certificate 5">
+    <div class="slider-container">
+      <div class="production-slider" id="slider">
+        <div class="production-certificate"><img src="img/shop-1.jpeg"></div>
+        <div class="production-certificate"><img src="img/shop-2.jpeg"></div>
+        <div class="production-certificate"><img src="img/firewall.jpeg"></div>
+        <div class="production-certificate"><img src="img/shop-3.jpeg"></div>
+        <div class="production-certificate"><img src="img/surface-grinding-machine.jpeg"></div>
       </div>
     </div>
+
+    <button class="slider-btn next" id="nextBtn">&#10095;</button>
 
   </div>
 </section>
 
 
+
 <style>
-.production-certificates-section {
-    padding-top: 10px;
-    padding-bottom: 20px;
+    .production-certificates-section {
+  padding: 40px 0;
 }
 
-    /* Hover animation */
+.slider-wrapper {
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.production-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
 .production-certificate {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: pointer;
+    min-width: 500px;
+    height: 400px;
+  margin-right: 30px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .production-certificate img {
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* On hover */
-.production-certificate:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+/* Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0b3d91;
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.production-certificate:hover img {
-    transform: scale(1.08);
-}
+.prev { left: -10px; }
+.next { right: -10px; }
 
-/* Grid layout */
-.production-certificates {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-/* Card style */
-.production-certificate {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Portrait images */
-.production-portrait {
-    aspect-ratio: 3 / 4;
-}
-
-/* Landscape images */
-.production-landscape {
-    aspect-ratio: 4 / 3;
-}
-
-.production-certificate img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Second row centered */
-.production-row-two {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.production-row-two .production-certificate {
-    width: calc(33.33% - 14px);
-}
-
-/* Tablet view */
-@media (max-width: 992px) {
-    .production-certificates {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .production-row-two .production-certificate {
-        width: 45%;
-    }
-}
-
-/* Mobile view */
-@media (max-width: 576px) {
-    .production-certificates {
-        grid-template-columns: 1fr;
-    }
-
-    .production-row-two {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .production-row-two .production-certificate {
-        width: 100%;
-    }
+/* Mobile */
+@media(max-width: 576px){
+  .production-certificate{
+    min-width: 90%;
+    height: 220px;
+    margin-right: 15px;
+  }
 }
 
 </style>
-      
+ 
+
+<script>
+const slider = document.getElementById("slider");
+const slides = document.querySelectorAll(".production-certificate");
+const slideWidth = slides[0].offsetWidth + 30;
+
+let index = 0;
+let autoSlide;
+
+/* Move slider */
+function updateSlider() {
+  slider.style.transform = `translateX(${-index * slideWidth}px)`;
+}
+
+/* Next */
+function nextSlide() {
+  index++;
+
+  if (index >= slides.length) {
+    index = 0; // 🔁 last → first
+  }
+
+  updateSlider();
+}
+
+/* Prev */
+function prevSlide() {
+  index--;
+
+  if (index < 0) {
+    index = slides.length - 1;
+  }
+
+  updateSlider();
+}
+
+/* Buttons */
+document.getElementById("nextBtn").addEventListener("click", nextSlide);
+document.getElementById("prevBtn").addEventListener("click", prevSlide);
+
+/* Auto Slide */
+function startAutoSlide() {
+  autoSlide = setInterval(nextSlide, 3000);
+}
+
+/* Pause on hover */
+slider.addEventListener("mouseenter", () => clearInterval(autoSlide));
+slider.addEventListener("mouseleave", startAutoSlide);
+
+/* Start */
+startAutoSlide();
+</script>
+
+
+
+
 
         <!-- FOOTER
         ================================================== -->
