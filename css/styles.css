@@ -387,7 +387,8 @@ a:active {
 
 .btn-style1.small {
     padding: 9px 27px !important;
-    font-size: 14px
+    font-size: 14px;
+    margin-top: 14px;
 }
 
 @media screen and (min-width: 992px) {
