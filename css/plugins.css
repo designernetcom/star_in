@@ -49159,7 +49159,7 @@ section.md {
     }
 
     section {
-        padding: 10px 0
+        padding: 27px 0;
     }
 
     section.md {
@@ -49878,7 +49878,7 @@ header {
     display: block;
     font-size: 17px !important;
     font-weight: 700;
-    padding: 21px 0.5rem;
+    padding: 21px 0.7rem;
     color: #191919;
     letter-spacing: 0.8px;
     /* text-transform: uppercase; */
@@ -50608,10 +50608,10 @@ header {
 @media screen and (min-width: 1238px) {
     .header-style1 .navbar-nav>li>a {
         color: black;
-        font-size: 15px !important;
+        font-size: 17px !important;
     }
         .navbar-brand img {
-    max-height: 70px;
+    max-height: 90px;
     transition-duration: 0.5s;
 }
 }
