@@ -12824,7 +12824,7 @@ display: inline-block !important;
     }
 
     .mb-xl-5 {
-        margin-bottom: 3rem !important
+        margin-bottom: 1.5rem !important;
     }
 
     .mb-xl-auto {
@@ -31453,6 +31453,7 @@ h6 a,
 
 section {
     padding: 40px 0;
+    padding-bottom: 0px;
     overflow: hidden;
     background: #fff;
     position: relative
@@ -32693,9 +32694,13 @@ section.md {
     margin-bottom: 2.2rem
 }
 
-.mb-2-3,
+/* .mb-2-3, */
 .my-2-3 {
     margin-bottom: 2.3rem
+}
+
+.mb-2-3 {
+    margin-bottom: 0.8rem;
 }
 
 .mb-2-4,
