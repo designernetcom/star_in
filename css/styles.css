@@ -2996,7 +2996,7 @@ h2.resp-accordion.resp-tab-active {
     font-size: 100px;
     line-height: 1;
     color: transparent;
-    -webkit-text-stroke: 3px #11102444;
+    -webkit-text-stroke: 3px #1668a8a3;
     margin-bottom: 15px;
     transition: .3s;
     -webkit-transition: .3s;
@@ -3006,15 +3006,15 @@ h2.resp-accordion.resp-tab-active {
 }
 
 .service-style01 .service-item:hover .sv-btn {
-    color: #839be3
+    color: #0f5387;
 }
 
 .service-style01 .service-item:hover .number {
-    -webkit-text-stroke-color: #5f7edb8b
+    -webkit-text-stroke-color: #1668a8;
 }
 
 .service-style01 .service-item .sv-btn {
-    color: #bfbfbf;
+    color: #1668a8;
     letter-spacing: 2px;
     font-size: 16px;
     text-transform: uppercase;
@@ -4272,3 +4272,76 @@ footer .phone a:focus {
 .footer-style01 .links-wrap li:last-child {
     margin-bottom: 0
 }
+
+       .sticky-icon {
+    z-index: 11111;
+    position: fixed;
+    top: 45%;
+    left: 0px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.sticky-icon a {
+    /* transform: translate(160px, 0px); */
+    border-radius: 0px 50px 50px 0px;
+    text-align: left;
+    margin: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 4px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.8s;
+}
+.Facebook {
+    background-color: #3b5998;
+    color: #FFF;
+}
+.Whatsapp {
+    background-color: green;
+    color: #FFF;
+}
+.Youtube {
+    background-color: #ff0000;
+    color: #FFF;
+}
+.Twitter {
+    background-color: #0077B5;
+    color: #FFF;
+}
+.Instagram {
+    background: radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%), radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%);
+    color: #FFF;
+}
+
+a {
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    /* text-decoration: none; */
+}
+a {
+    color: #0d6efd;
+    /* text-decoration: underline; */
+} 
+.sticky-icon a i.fa-whatsapp {
+    background-color: #fff;
+    color: green;
+}
+.sticky-icon a i {
+    background-color: #FFF;
+    height: 33px;
+    width: 33px;
+    color: #3b5998;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    margin-right: 3px;
+    transition: all 0.5s;
+    margin-left: 1px;
+} 
+

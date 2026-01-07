@@ -48972,7 +48972,8 @@ section.md {
 
     .pe-xxl-8,
     .px-xxl-8 {
-        padding-right: 4.5rem
+        padding-right: 4.5rem;
+        padding-bottom: 15px;
     }
 
     .pe-xxl-9,

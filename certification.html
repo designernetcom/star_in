@@ -74,7 +74,7 @@
                     <li>
                       <a href="about.html">About Us</a>
                       <ul>
-                        <li><a href="about.html">The Company</a></li>
+                        <li><a href="about.html">Who we are</a></li>
                         <li><a href="management.html">Management </a></li>
                         <li><a href="how-we-work.html"> History</a></li>
 
@@ -96,8 +96,26 @@
                     <li>
                       <a href="#">Machines</a>
                       <ul>
-                        <li><a href="precision-machining.html">Precision Machining</a></li>
-                        <li><a href="precision-stamping.html">Precision Stamping</a></li>
+                        <li><a href="precision-machining.html">Precision Machining</a>
+                        <ul>
+                        <li><a href="cnc_machining.html">CNC Machining</a></li>
+                        <li><a href="vmc_machining.html">VMC Machining</a></li>
+                        <li><a href="cnc_wirecut_edm.html">CNC Wirecut EDM</a></li>
+                      </ul>
+                        </li>
+                        <li><a href="precision-stamping.html">Precision Stamping</a>
+                        <!-- <ul>
+                        <li><a href="cnc_machining.html">Brackets</a></li>
+                        <li><a href="vmc_machining.html">Mounting Plate</a></li>
+                        <li><a href="cnc_wirecut_edm.html">Electrical Plants</a></li>
+                        <li><a href="cnc_machining.html">Junction Box</a></li>
+                        <li><a href="vmc_machining.html">Terminal</a></li>
+                        <li><a href="cnc_wirecut_edm.html">Precision Stamping</a></li>
+                        <li><a href="cnc_machining.html">Stamping</a></li>
+                        <li><a href="vmc_machining.html">Prass Parts</a></li>
+                        <li><a href="cnc_wirecut_edm.html">Battery Terminal</a></li>
+                      </ul> -->
+                        </li>
                         
                       </ul>
                     </li>
@@ -912,201 +930,196 @@
 
 
 <section class="certificates-section">
-  <div class="certificates">
-<div class="group-grid">
-    <div class="certificate-wrapper">
-      <h4 class="cert-heading">QMS Certificate</h4>
-      <div class="certificate portrait">
-        <img src="img/certificate-1.jpeg" alt="Certificate 1">
+  <div class="cert-grid">
+
+    <!-- Card 1 -->
+    <div class="cert-card" onclick="openModal('img/certificate-1.jpeg','QMS Certificate')">
+      <h4>QMS Certificate</h4>
+      <div class="cert-img">
+        <img src="img/certificate-1.jpeg" alt="QMS Certificate">
       </div>
+      <button class="view-btn"
+        onclick="event.stopPropagation(); openModal('img/certificate-1.jpeg','QMS Certificate')">
+        View Certificate
+      </button>
     </div>
 
-    <div class="certificate-wrapper">
-      <h4 class="cert-heading">Certificate of Association</h4>
-      <div class="certificate landscape">
-        <img src="img/certificate-4.jpeg" alt="Certificate 5">
+    <!-- Card 2 -->
+    <div class="cert-card" onclick="openModal('img/certificate-7.webp','Best Supplier Certification')">
+      <h4>Best Supplier Certification</h4>
+      <div class="cert-img">
+        <img src="img/certificate-7.webp" alt="ISO Certificate">
       </div>
+      <button class="view-btn"
+        onclick="event.stopPropagation(); openModal('img/certificate-7.webp','Best Supplier Certification')">
+        View Certificate
+      </button>
     </div>
-</div>
-    <!-- COMMON HEADING FOR LAST TWO -->
-    <div class="certificate-group">
-      <h4 class="cert-heading">Best Supplier certification</h4>
 
-      <div class="group-grid">
-        <div class="certificate portrait">
-          <img src="img/certificate-2.jpeg" alt="Certificate 2">
-        </div>
-
-        <div class="certificate landscape">
-          <img src="img/certificate-3.jpeg" alt="Certificate 3">
-        </div>
+    <!-- Card 3 -->
+    <div class="cert-card" onclick="openModal('img/certificate-6.webp','Best Supplier Certification')">
+      <h4>Best Supplier Certification</h4>
+      <div class="cert-img">
+        <img src="img/certificate-6.webp" alt="Best Supplier Award">
       </div>
+      <button class="view-btn"
+        onclick="event.stopPropagation(); openModal('img/certificate-6.webp','Best Supplier Certification')">
+        View Certificate
+      </button>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="cert-card" onclick="openModal('img/certificate-8.webp','Certificate of Association')">
+      <h4>Certificate of Association</h4>
+      <div class="cert-img">
+        <img src="img/certificate-8.webp" alt="Certificate of Association">
+      </div>
+      <button class="view-btn"
+        onclick="event.stopPropagation(); openModal('img/certificate-8.webp','Certificate of Association')">
+        View Certificate
+      </button>
     </div>
 
   </div>
 </section>
 
 
+<!-- Modal -->
+<div id="certModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <h4 id="modalTitle"></h4>
+  <img id="modalImg" src="" alt="Certificate">
+</div>
+
 
 
 <style>
 
-    .certificates-section {
-        padding: 45px 0;
-    }
-
-/* GROUP WRAPPER */
-.certificate-group {
-  grid-column: span 2; /* occupies 2 columns */
-  display: flex;
-  flex-direction: column;
+.view-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #1668a8;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-/* GRID FOR LAST TWO IMAGES */
-.group-grid {
+.view-btn:hover {
+  background: #033e6b;
+}
+
+
+  .certificates-section {
+  padding: 60px 20px;
+  background: #f8f9fa;
+}
+
+.cert-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-
-    .certificates {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
   max-width: 1200px;
   margin: auto;
-  /* display: grid; */
-  /* grid-template-columns: repeat(3, 1fr); */
-  gap: 65px;
-    grid-column: span 2; /* occupies 2 columns */
-  display: flex;
-  flex-direction: column;
 }
 
-/* HEADING (OUTSIDE CARD) */
-.cert-heading {
-  text-align: center;
-  font-size: 30px;
-    font-weight: 800;
-    margin-bottom: 35px;
-}
-
-/* WRAPPER */
-.certificate-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-/* CARD */
-.certificate {
+.cert-card {
   background: #fff;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  padding: 20px;
   cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* IMAGE */
-.certificate img {
+.cert-card:hover {
+  transform: translateY(-6px);
+}
+
+.cert-card h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.cert-img {
+  height: 230px; /* half image */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.cert-img img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
-/* Portrait */
-.portrait {
-  aspect-ratio: 3 / 4;
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 999;
+  padding: 105px 20px;
+  text-align: center;
 }
 
-/* Landscape */
-.landscape {
-  aspect-ratio: 4 / 3;
+.modal img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  margin-top: 15px;
 }
 
-/* Hover */
-.certificate:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+.modal h4 {
+  color: #fff;
+  margin-bottom: 10px;
 }
 
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+}
 
-/* ===========================
-   📱 MOBILE (≤ 576px)
-=========================== */
+/* Mobile */
 @media (max-width: 576px) {
-  .certificates {
-    grid-template-columns: 1fr;
-  }
-
-  .certificate-group {
-    grid-column: span 1;
-  }
-
-  .group-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cert-heading {
-    font-size: 20px;
-  }
-}
-
-/* ===========================
-   📱 TABLET (≤ 768px)
-=========================== */
-/* @media (max-width: 768px) {
-  .certificates {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .certificate-group {
-    grid-column: span 2;
-  }
-} */
- /* ===========================
-   MOBILE & SMALL SCREENS
-=========================== */
-@media (max-width: 768px) {
-
-  /* ONE COLUMN FOR ALL */
-  .certificates {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  /* First two certificates stack */
-  .certificate-wrapper {
-    width: 100%;
-  }
-
-  /* Last two group stack */
-  .certificate-group {
-    grid-column: span 1;
-  }
-
-  .group-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-
-/* ===========================
-   💻 SMALL LAPTOP (≤ 1024px)
-=========================== */
-@media (max-width: 1024px) {
-  .certificates {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-
-  .certificate-group {
-    grid-column: span 2;
+  .cert-img {
+    height: 130px;
   }
 }
 
 </style>
 
 
+
+<script>
+  function openModal(imgSrc, title) {
+    document.getElementById("certModal").style.display = "block";
+    document.getElementById("modalImg").src = imgSrc;
+    document.getElementById("modalTitle").innerText = title;
+  }
+
+  function closeModal() {
+    document.getElementById("certModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("certModal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  }
+</script>
 
 
         <!-- FOOTER
@@ -1168,7 +1181,7 @@
         <div class="row mb-6">
 
 
-          <div class="col-md-3">
+          <div class="col-md-4">
             <div class="ps-md-2-6 ">
               <h3 class="text-white h4 mb-2-4 mt-2-4">Contact Us</h3>
               <ul class="links-wrap list-unstyled mb-0">
@@ -1181,7 +1194,7 @@
             </div>
           </div>
 
-          <div class="col-md-3">
+          <!--  <div class="col-md-3">
             <div class="ps-md-2-6 ps-xl-7">
               <h3 class="text-white h4 mb-2-4 mt-2-4">Products</h3>
               <ul class="links-wrap list-unstyled mb-0">
@@ -1192,7 +1205,7 @@
                 <li><a href="">Bracket  </a></li>
               </ul>
             </div>
-          </div>
+          </div> --> 
 
 
           <div class="col-md-4">
@@ -1213,13 +1226,13 @@
           </div>
 
 
-          <div class="col-md-2" style="padding-right:0px; padding-left: 0px;">
+          <div class="col-md-4" style="padding-right:0px; padding-left: 0px;">
             <div class="ps-lg-4">
               <h3 class="text-white h4 mb-2-4 mt-2-4">Review Us</h3>
               <a href="">
                 <img
                   src="https://cdn.prod.website-files.com/62b1b17308b0d74291186304/63ca9fbadaacd2153b8045ca_Click-here-teo-leave-us-a-review-on-Google-min.png"
-                  alt="">
+                  alt="" style="width: 60%;">
               </a>
             </div>
           </div> 
@@ -1248,6 +1261,25 @@
     </footer>
 
     </div>
+
+        <div class="sticky-icon">
+        <!-- <a href="https://www.facebook.com/profile.php?id=61570945106933" class="Facebook">
+            <i class="fab fa-facebook"></i></a> -->
+        <a href="https://www.youtube.com/@balchandrachougule5306" class="Youtube">
+            <i class="fab fa-youtube" style="color: #ff0000;"></i></a>
+
+        <!-- <a href="" class="Twitter">
+            <i class="fab fa-linkedin-in"></i></a> -->
+
+            <!-- <a href="" class="Whatsapp">
+            <i class="fab fa-whatsapp"></i></a> -->
+        <!-- <a href="https://www.instagram.com/klimb_builtech_solutions/" class="Instagram">
+            <i class="fab fa-instagram"></i></a> -->
+        
+    </div>
+
+
+
 
     <!-- BUY THEME
     ================================================== -->
