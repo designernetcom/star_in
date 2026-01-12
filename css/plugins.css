@@ -31004,7 +31004,8 @@ iframe {
 }
 
 p {
-    margin: 0 0 20px
+    margin: 0 0 20px;
+    text-align: justify;
 }
 
 .height-50 {
@@ -33362,7 +33363,7 @@ section.md {
 
 .pt-6,
 .py-6 {
-    padding-top: 3.5rem
+    padding-top: 4.5rem
 }
 
 .pt-7,
