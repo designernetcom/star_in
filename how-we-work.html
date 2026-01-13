@@ -468,6 +468,117 @@
                 height: 3px;
             }
         }
+
+        .pillar-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.pillar-section h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 60px;
+    color: #121c22
+}
+
+/* Pillar */
+.pillar {
+    position: relative;
+    padding-left: 60px;
+}
+
+/* .pillar::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0b2a4a, #164a88);
+    border-radius: 10px;
+} */
+
+/* Items */
+.pillar-item {
+    position: relative;
+    margin-bottom: 45px;
+    animation: rise 0.9s ease forwards;
+}
+
+/* Year Badge */
+.badge {
+position: absolute;
+    left: -65px;
+    top: 10px;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    color: #595959;
+    font-size: 19px;
+    font-weight: bolder;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 6px rgb(22 104 168);
+}
+
+/* Card */
+.pillar-card {
+    background: #fff;
+    padding: 25px 30px;
+    margin-left: 60px;
+    border-radius: 14px;
+    line-height: 1.7;
+    box-shadow: 0 20px 45px rgb(22 104 168 / 8%);
+    transition: 0.4s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(22, 105, 168, 0.145);
+}
+
+/* Footer */
+.pillar-footer {
+    margin-top: 50px;
+    padding: 30px;
+    border: 3px solid #1668a8;
+    box-shadow: 0 20px 45px rgb(22 104 168 / 8%);
+    border-radius: 14px;
+    /* background: linear-gradient(135deg, #0b2a4a, #164a88); */
+    color: #434343;
+    text-align: center;
+}
+
+/* Animation */
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .pillar-section h2 {
+        font-size: 26px;
+    }
+
+    .pillar {
+        padding-left: 40px;
+    }
+
+    .pillar-card {
+        margin-left: 45px;
+        padding: 20px;
+    }
+}
         </style>
 
  <!-- Banner Section -->
@@ -486,41 +597,91 @@
         </div>
     </section>
 
+
+    <section class="pillar-section">
+    <h2>Manufacturing Evolution & Capability Enhancement</h2>
+
+    <div class="pillar">
+
+        <div class="pillar-item">
+            <div class="badge">2014</div>
+            <div class="pillar-card">
+                Company established with basic press infrastructure, focusing on controlled manufacturing and disciplined processes.
+            </div>
+        </div>
+
+        <div class="pillar-item">
+            <div class="badge">2018</div>
+            <div class="pillar-card">
+                Introduction of pneumatic press technology to enhance process consistency, repeatability, and operator safety.
+            </div>
+        </div>
+
+        <div class="pillar-item">
+            <div class="badge">2022</div>
+            <div class="pillar-card">
+                Commissioning of a 10,000 sq. ft. manufacturing facility enabling improved layout, material flow, and quality compliance.
+            </div>
+        </div>
+
+        <div class="pillar-item">
+            <div class="badge">2024</div>
+            <div class="pillar-card">
+                Press capacity enhanced up to <strong>150 Tons</strong>, supporting higher-load components and customer-specific requirements.
+            </div>
+        </div>
+
+        <div class="pillar-item">
+            <div class="badge">2025</div>
+            <div class="pillar-card">
+                Complete migration to pneumatic press machines aligned with automotive standards for safety, precision, and productivity.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="pillar-footer">
+        <p>✔ Supports ISO 9001 / IATF 16949 philosophy</p>
+        <p>✔ Focus on safety, process control, scalability & technology upgradation</p>
+    </div>
+
+</section>
+
         <!-- HISTORY
         ================================================== -->
         <section>
             <div class="container">
-                <div class="section-title-01 mb-5 text-center">
-                    <!-- <span class="text-primary font-weight-600 text-uppercase letter-spacing-1 position-relative ps-2">Our History</span> -->
+                <!-- <div class="section-title-01 mb-5 text-center">
+                    <span class="text-primary font-weight-600 text-uppercase letter-spacing-1 position-relative ps-2">Our History</span>
                     <h2 class="display-5 lh-1 font-weight-800 mb-0 w-md-80 w-lg-65 w-xl-55 w-xxl-50 mx-auto">How we started</h2>
-                </div>
+                </div> -->
                 <div class="history-carousel owl-carousel owl-theme">
                     <div class="history-timeline">
                         <div class="timeline-flag"></div>
                         <div class="me-md-4 me-xl-5">
                             <span class="history-year">2014</span>
                             <img src="https://www.acebuildingservice.com/hubfs/Skana_Aluminum_04W.jpg" class="mb-4 rounded history-img" alt="...">
-                            <h3 class="h4">Foundation Year</h3>
-                            <p class="mb-0">Star Industries was launched in the Chakan–Pune industrial hub with a small but skilled technical team.
-The mission? Bring precision + quality together in sheet metal press and machined components</p>
+                            <h5>Company Founded
+with 2 Machines</h5>
+                            <!-- <p class="mb-0">Company Founded with 2 Machines</p> -->
                         </div>
                     </div>
                     <div class="history-timeline">
                         <div class="timeline-flag"></div>
                         <div class="me-md-4 me-xl-5">
-                            <span class="history-year">2015</span>
+                            <span class="history-year">2018</span>
                             <img src="https://thumbs.dreamstime.com/b/cold-metal-stamping-pressing-production-line-industrial-facility-machines-lined-up-showcasing-automated-process-401030332.jpg" class="mb-4 rounded history-img" alt="...">
-                            <h3 class="h4">First Production Line Ready</h3>
-                            <p class="mb-0">Full-scale production kicked off. The company started taking on early clients and delivering consistent metal press components with tight tolerances.</p>
+                            <h5>First Pneumatic Press Installed</h5>
+                            <!-- <p class="mb-0">Introduction of pneumatic press technology to improve process consistency, repeatability, and operator safety.</p> -->
                         </div>
                     </div>
                     <div class="history-timeline">
                         <div class="timeline-flag"></div>
                         <div class="me-md-4 me-xl-5">
-                            <span class="history-year">2016</span>
+                            <span class="history-year">2022</span>
                             <img src="https://www.stampingsystems.com/wp-content/uploads/aida-mobile-mos-with-no-panels-big.jpg" class="mb-4 rounded history-img" alt="...">
-                            <h3 class="h4">Expansion of Machine Capabilities</h3>
-                            <p class="mb-0">New machinery and upgraded infrastructure were added, helping Star Industries boost output and speed without compromising quality.</p>
+                                <h5>10,000 sq. ft. Manufacturing Plant Constructed</h5>
+                            <!-- <p class="mb-0">Commissioning of a 10,000 sq. ft. dedicated manufacturing facility, enabling improved layout, material flow, and compliance with quality systems.</p> -->
                         </div>
                     </div>
                    
@@ -529,20 +690,20 @@ The mission? Bring precision + quality together in sheet metal press and machine
                       <div class="history-timeline">
                         <div class="timeline-flag"></div>
                         <div class="me-md-4 me-xl-5">
-                            <span class="history-year">2021</span>
+                            <span class="history-year">2024</span>
                             <img src="https://vnmanpower.com/images/blog/2023/09/25/original/1_opn1wt7cjxf3a4knqhitvw_1695614757.jpg" class="mb-4 rounded history-img" alt="...">
-                            <h3 class="h4">Stronger Client Base</h3>
-                            <p class="mb-0">Secured long-term partnerships with major OEMs and Tier-1 suppliers owing to precision, on-time delivery, and custom engineering capabilities.</p>
+                            <h5>Press Tonnage Increased to 150 Tons</h5>
+                            <!-- <p class="mb-0">Enhancement of press capacity up to 150 Tons, supporting higher load components and customer-specific requirements.</p> -->
                         </div>
                     </div>
 
                       <div class="history-timeline">
                         <div class="timeline-flag"></div>
                         <div class="me-md-4 me-xl-5">
-                            <span class="history-year">2024</span>
+                            <span class="history-year">2025</span>
                             <img src="./img/history-images/10-years-business-more-than-260nw-2244635921.png" class="mb-4 rounded history-img" alt="...">
-                            <h3 class="h4">10 Years of Excellence</h3>
-                            <p class="mb-0">Celebrated a decade of delivering top-notch Sheet Metal Press and Machined Components backed by innovation, customer-first focus, and quality commitment.</p>
+                            <h5>100% Pneumatic Press Machines Achieved</h5>
+                            <!-- <p class="mb-0">Complete migration to pneumatic press machines, aligning with automotive expectations for safety, precision, productivity, and continuous improvement.</p> -->
                         </div>
                     </div>
 
